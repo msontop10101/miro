@@ -10,18 +10,18 @@ import bgbtn from '../assets/6.png'
 import one from '../assets/1.png'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
-import four from '../assets/6.png'
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
     return (
         <>
             <div class='bg-black py-5'>
-                <div class='px-5 flex items-center justify-center text-white relative'>
-                    
-                    <div class='absolute top-[-40%] left-[-50%]'><img src={one} alt="bg" /></div>
-                    <div class='absolute top-[-20%] right-[-50%]'><img src={two} alt="bg" /></div>
-                    <div class='absolute bottom-[-40%] right-[-50%]'><img src={one} alt="bg" /></div>
+                <div class='px-5 flex items-center justify-center text-white relative overflow-hidden'>
+                    <div>
+                        <img class='absolute top-[-20%] left-[-30%]' src={one} alt="bg" />
+                        <img class='absolute top-[-35%] right-[-30%]' src={two} alt="bg" />
+                        <img class='absolute bottom-[-10%] right-[-10%]' src={three} alt="bg" />
+                    </div>
 
                     <div class='z-40'>
                         <h1 class='font-bold text-4xl my-4'>
@@ -58,7 +58,7 @@ const LandingPage = () => {
 
                         <div class='relative'>
                             <div class='flex justify-center py-5'>
-                                <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 fot-semibold'>SCOPRI DI PIÙ</button>
+                                <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
                             </div>
                             <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
                         </div>
