@@ -25,6 +25,7 @@ const LandingPage = () => {
                     </div>
 
                     <div class='z-40'>
+                    <div >
                         <h1 class='font-bold text-4xl my-4 leading-[3rem]'>
                             Il tuo assistente
                             personale,
@@ -64,6 +65,7 @@ const LandingPage = () => {
                             <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
                         </div>
 
+                    </div>
                     </div>
 
 

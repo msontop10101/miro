@@ -31,7 +31,8 @@ const Navigations = () => {
                 </ul>
             </nav>
 
-            <nav class='bg-[black] z-40 block md:hidden px-3 py-4'>
+            <div class='relative'>
+            <nav class='z-40 block md:hidden px-3 py-4 bg-black'>
                 <div class='flex justify-between items-center pr-3'>
                     <Link to='/'>
                         <div class='bg-black flex items-center'>
@@ -53,8 +54,8 @@ const Navigations = () => {
                         </Link>
                     </ul>}
                 </div>
-
             </nav>
+            </div>
         </>
     )
 }
