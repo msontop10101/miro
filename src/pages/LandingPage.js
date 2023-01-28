@@ -16,7 +16,7 @@ import Footerlinks from '../components/Footerlinks'
 const LandingPage = () => {
     return (
         <>
-            <div class='bg-black py-5'>
+            <div class='bg-black pb-5'>
                 <div class='px-5 flex items-center justify-center text-white relative overflow-hidden'>
                     <div>
                         <img class='absolute top-[-20%] left-[-30%]' src={one} alt="bg" />
@@ -89,25 +89,30 @@ const LandingPage = () => {
                         umano</p>
                     <p class='font-bold text-lg py-2'>provalo per crederci</p>
                     <div class='relative'>
-                            <div class='flex justify-center py-5'>
-                                <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
-                            </div>
-                            <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+                        <div class='flex justify-center py-5'>
+                            <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                         </div>
+                        <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+                    </div>
                 </div>
 
                 <div class='relative bg-[#272727] overflow-hidden'>
-                <div class='absolute top-[-280%] left-[-100%]'><img src={two} alt="bg" /></div>
+                    <div class='absolute top-[-280%] left-[-100%]'><img src={two} alt="bg" /></div>
                     <div class='flex opacity-75 z-40'>
                         <div><img src={openai} width={100} height={100} alt='openai' /></div>
                         <div class='flex items-center'><img src={google} width={100} height={100} alt='google' /> <p class='font-bold text-4xl text-white'>Partner</p></div>
                     </div>
                 </div>
 
-                <div class='my-3 px-3 z-40'>
-                    <p class='font-bold text-4xl text-white z-40'>Cosa puoi<br />
-                        chiedergli?</p>
+                <div class='my-3 px-3 z-40 relative'>
                     <div>
+                        <img class='absolute opacity-70 top-[-25%] left-[-20%]' src={two} alt="bg" />
+                        <img class='absolute opacity-70 top-[20%] right-[-30%]' src={three} alt="bg" />
+                        <img class='absolute opacity-25 bottom-[-30%] left-[-30%]' src={one} alt="bg" />
+                    </div>
+                    <p class='font-bold text-4xl text-white'>Cosa puoi<br />
+                        chiedergli?</p>
+                    <div class='z-40'>
                         <div class='flex gap-4 py-6'>
                             <div><img src={question} alt="question" /></div>
                             <div class='text-white'>
@@ -151,16 +156,16 @@ const LandingPage = () => {
                     <p class='text-lg font-semibold'>Crea ora il tuo account e inizia a
                         sfruttare l'intero universo di
                         conoscenza dell'umanità.</p>
-                        <div class='relative'>
-                            <div class='flex justify-center py-5'>
-                                <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
-                            </div>
-                            <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+                    <div class='relative'>
+                        <div class='flex justify-center py-5'>
+                            <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                         </div>
+                        <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+                    </div>
                 </div>
 
                 <div>
-                    <Footerlinks/>
+                    <Footerlinks />
                 </div>
             </div>
         </>
