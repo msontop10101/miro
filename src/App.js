@@ -4,7 +4,7 @@ import Navigations from './components/Navigations';
 import Accedi from './pages/Accedi';
 import CreateAccount from './pages/CreateAccount';
 import LandingPage from './pages/LandingPage';
-import Sitefooter from './components/Footer';
+import Sitefooter from './components/SiteFooter';
 
 
 function App() {
