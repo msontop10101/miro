@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logonbg.png'
 import './Navigations.css'
 import profile from '../assets/profile.png'
 import chat from '../assets/chat.png'
+import menu from '../assets/menu.png'
 
 const Navigations = () => {
+    const [open, setOpen] = useState(false)
   return (
     <>
-        <nav class='bg-black flex justify-between px-2'>
+        <nav class='bg-black hidden md:flex items-center justify-between px-3'>
             <div>
                 <div class='bg-black flex items-center'>
                     <img src={logo} width={50} height={50} alt='logo'/>
@@ -25,6 +27,29 @@ const Navigations = () => {
                     <li>accedi</li>
                 </Link>
             </ul>
+        </nav>
+
+        <nav class='bg-black block md:hidden px-3'>
+            <div class='flex justify-between items-center'>
+                <div class='bg-black flex items-center'>
+                    <img src={logo} width={50} height={50} alt='logo'/>
+                    <p class='text-xl ml-1 font-bold text-white'>miro</p>
+                </div>
+                <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu'/></div>
+            </div>
+            <div class='flex justify-center'>
+                {open && <ul class='navigations flex gap-8'>
+                <Link to='/crea-un-account' class='flex items-center gap-2'>
+                    <img src={profile} width={40} height={40} alt='profile'/>
+                    <li>crea un account</li>
+                </Link>
+                <Link to='/accedi' class='flex items-center'>
+                    <img src={chat} width={40} height={40} alt='chat'/>
+                    <li>accedi</li>
+                </Link>
+            </ul>}
+            </div>
+            
         </nav>
     </>
   )

@@ -18,7 +18,7 @@ function App() {
         <Route path='/accedi' element={<Accedi />}>Accedi</Route>
       </Routes>
       <div class='flex justify-center relative'>
-        <div class='absolute bg-black opacity-95'>
+        <div class='absolute bg-black opacity-95 h-[100vh]'>
           <div class='flex'>
             <img src={one} alt='one' class='bgimgs' />
             <img src={two} alt='two' class='bgimgs' />
@@ -28,36 +28,52 @@ function App() {
             <img src={four} alt='four' class='bgimgs' />
           </div>
         </div>
-        <div class='text-white z-40 w-[60%] flex items-center justify-center'>
+        <div class='text-white z-40 px-5 flex items-center justify-center mt-10'>
           <div>
-          <h1 class='font-bold text-4xl'>
+          <h1 class='font-bold text-4xl my-4'>
             Il tuo assistente
             personale,
             a portata di
             un click.
           </h1>
-          <p class='font-semibold text-lg'>
+          <p class='font-semibold text-lg my-4'>
             Miro è un'intelligenza artificiale
             in grado di rispondere a qualsiasi
             tua domanda con testi semplici o
             complessi in pochi secondi.
           </p>
-          <div class='flex gap-2'>
+          <div class='hidden md:flex gap-2'>
+            <div><p>disponibile 24/7</p></div>
+            <div><p>facile da usare</p></div>
+            <div><p>super-intelligente</p></div>
+            <div><p>100% gratuito</p></div>
+          </div>
+
+          <div class=''>
+          <div class=' w-[80%] flex flex-col font-bold gap-2 mt-2 md:hidden'>
+            <div class='flex justify-between'>
             <p>disponibile 24/7</p>
             <p>facile da usare</p>
+            </div>
+            <div class='flex justify-between'>
             <p>super-intelligente</p>
             <p>100% gratuito</p>
+            </div>
           </div>
-          {/* <div>
-            <div class='relative'><img src={eleven} alt='eleven'/></div>
-            <p class='absolute top-0'>SCOPRI DI PIÙ</p>
+          </div>
+
+          {/* <div class='bgimg z-40'></div> */}
+          <div class='flex justify-center'>
+          {/* <div style={{position: 'relative'}}>
+            <img src={eleven} alt='eleven'/>
+            <p style={{position: 'absolute', top:'50%', left:'50%'}}>SCOPRI DI PIÙ</p>
           </div> */}
-          {/* <div class='btnbg' >
-            <h1>Hello</h1>
-          </div> */}
+          </div>
           </div>
         </div>
+        
       </div>
+      
     </>
   );
 }

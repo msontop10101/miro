@@ -43,11 +43,10 @@
   width: 50%;
   height: 50%;
 }
-.btnbg {
-  background-color: red;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.bgimg {
+  background-image: url(./assets/11.png);
+  width: 350px;
+  height: 200px;
+  background-size: cover;
 }
