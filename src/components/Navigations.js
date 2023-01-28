@@ -30,7 +30,7 @@ const Navigations = () => {
         </nav>
 
         <nav class='bg-black block md:hidden px-3'>
-            <div class='flex justify-between items-center'>
+            <div class='flex justify-between items-center pr-3'>
                 <div class='bg-black flex items-center'>
                     <img src={logo} width={50} height={50} alt='logo'/>
                     <p class='text-xl ml-1 font-bold text-white'>miro</p>
@@ -38,7 +38,7 @@ const Navigations = () => {
                 <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu'/></div>
             </div>
             <div class='flex justify-center'>
-                {open && <ul class='navigations flex gap-8'>
+                {open && <ul class='navigations flex gap-8 py-2'>
                 <Link to='/crea-un-account' class='flex items-center gap-2'>
                     <img src={profile} width={40} height={40} alt='profile'/>
                     <li>crea un account</li>

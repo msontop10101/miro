@@ -40,13 +40,6 @@
 }
 
 .bgimgs {
-  width: 50%;
-  height: 50%;
-}
-
-.bgimg {
-  background-image: url(./assets/11.png);
-  width: 350px;
+  width: 200px;
   height: 200px;
-  background-size: cover;
 }
