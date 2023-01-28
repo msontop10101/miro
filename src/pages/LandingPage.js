@@ -20,7 +20,7 @@ const LandingPage = () => {
                 <div class='px-5 flex items-center justify-center text-white relative'>
                     
                     <div class='absolute top-[-40%] left-[-50%]'><img src={one} alt="bg" /></div>
-                    <div class='absolute top-[-50%] right-[-50%]'><img src={two} alt="bg" /></div>
+                    <div class='absolute top-[-20%] right-[-50%]'><img src={two} alt="bg" /></div>
                     <div class='absolute bottom-[-40%] right-[-50%]'><img src={one} alt="bg" /></div>
 
                     <div class='z-40'>
