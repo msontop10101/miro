@@ -90,7 +90,9 @@ const LandingPage = () => {
                     <p class='font-bold text-lg py-2'>provalo per crederci</p>
                     <div class='relative'>
                         <div class='flex justify-center py-5'>
-                            <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
+                            <Link to='/crea-un-account' class='w-[80%] z-40'>
+                            <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class=' font-semibold'>CREA IL TUO ACCOUNT</button>
+                            </Link>
                         </div>
                         <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
                     </div>
@@ -158,7 +160,9 @@ const LandingPage = () => {
                         conoscenza dell'umanità.</p>
                     <div class='relative'>
                         <div class='flex justify-center py-5'>
+                            <Link to='/crea-un-account' class='w-[80%] z-40'>
                             <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
+                            </Link>
                         </div>
                         <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
                     </div>
