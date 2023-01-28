@@ -115,7 +115,7 @@ const LandingPage = () => {
                             <img class='absolute opacity-70 top-[20%] right-[-30%]' src={three} alt="bg" />
                             <img class='absolute opacity-25 bottom-[-30%] left-[-30%]' src={one} alt="bg" />
                         </div>
-                        <p class='font-bold text-4xl text-white text-left leading-[3rem] block md:hidden'>Cosa puoi<br />
+                        <p class='font-bold text-4xl text-white text-left leading-[3rem] block md:hidden mb-2'>Cosa puoi<br />
                             chiedergli?</p>
                         <p class='font-bold text-4xl text-white text-center hidden md:block'>Cosa puoi
                             chiedergli?</p>
