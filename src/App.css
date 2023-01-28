@@ -39,7 +39,10 @@
   }
 }
 
-.bgimgs {
-  width: 200px;
-  height: 200px;
+.footerlinks {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.footerlinks li {
+  padding: 5px 0px 5px 0px;
 }

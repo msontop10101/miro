@@ -11,6 +11,7 @@ import one from '../assets/1.png'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
 import { Link } from 'react-router-dom'
+import Footerlinks from '../components/Footerlinks'
 
 const LandingPage = () => {
     return (
@@ -95,7 +96,7 @@ const LandingPage = () => {
                         </div>
                 </div>
 
-                <div class='relative bg-[#272727]'>
+                <div class='relative bg-[#272727] overflow-hidden'>
                 <div class='absolute top-[-280%] left-[-100%]'><img src={two} alt="bg" /></div>
                     <div class='flex opacity-75 z-40'>
                         <div><img src={openai} width={100} height={100} alt='openai' /></div>
@@ -150,15 +151,16 @@ const LandingPage = () => {
                     <p class='text-lg font-semibold'>Crea ora il tuo account e inizia a
                         sfruttare l'intero universo di
                         conoscenza dell'umanità.</p>
+                        <div class='relative'>
+                            <div class='flex justify-center py-5'>
+                                <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
+                            </div>
+                            <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+                        </div>
                 </div>
 
                 <div>
-                    <ul class='footer-links'>
-                        <Link to='/crea-un-account'><li>crea un account</li></Link>
-                        <Link to='/accedi'><li>accedi</li></Link>
-                        <Link to='/'><li>istruzioni</li></Link>
-                        <Link to='/'><li>privacy policy</li></Link>
-                    </ul>
+                    <Footerlinks/>
                 </div>
             </div>
         </>
