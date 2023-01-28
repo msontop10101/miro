@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logonbg.png'
+import logo from '../assets/logoicon.jpeg'
 import './Navigations.css'
 import profile from '../assets/profile.png'
 import chat from '../assets/chat.png'
@@ -31,7 +31,7 @@ const Navigations = () => {
                 </ul>
             </nav>
 
-            <nav class='bg-[black] z-40 block md:hidden px-3'>
+            <nav class='bg-[black] z-40 block md:hidden px-3 py-4'>
                 <div class='flex justify-between items-center pr-3'>
                     <Link to='/'>
                         <div class='bg-black flex items-center'>
