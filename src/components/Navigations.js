@@ -31,10 +31,12 @@ const Navigations = () => {
 
         <nav class='bg-[black] z-40 block md:hidden px-3'>
             <div class='flex justify-between items-center pr-3'>
+                <Link to='/'>
                 <div class='bg-black flex items-center'>
                     <img src={logo} width={50} height={50} alt='logo'/>
                     <p class='text-xl ml-1 font-bold text-white'>miro</p>
                 </div>
+                </Link>
                 <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu'/></div>
             </div>
             <div class='flex justify-center'>
