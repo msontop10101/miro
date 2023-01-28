@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Footer = () => {
+const Sitefooter = () => {
   return (
     <>
         <div style={{borderTop: "2px solid white"}} class='text-center font-bold text-lg bg-black text-white'>
@@ -10,4 +10,4 @@ const Footer = () => {
   )
 }
 
-export default Footer;
+export default Sitefooter;

@@ -4,7 +4,8 @@ import Navigations from './components/Navigations';
 import Accedi from './pages/Accedi';
 import CreateAccount from './pages/CreateAccount';
 import LandingPage from './pages/LandingPage';
-// import Footer from './components/Footer';
+import Sitefooter from './components/footer';
+
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path='/crea-un-account' element={<CreateAccount />}>crea un account</Route>
         <Route path='/accedi' element={<Accedi />}>Accedi</Route>
       </Routes>
-      {/* <Footer/> */}
+      <Sitefooter/>
     </>
   );
 }
