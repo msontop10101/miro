@@ -41,11 +41,11 @@ const Navigations = () => {
             </div>
             <div class='flex justify-center'>
                 {open && <ul class='navigations flex gap-8 py-2'>
-                <Link to='/crea-un-account' class='flex items-center gap-2'>
+                <Link to='/crea-un-account' class='flex items-center gap-2' onClick={() => setOpen(false)}>
                     <img src={profile} width={40} height={40} alt='profile'/>
                     <li>crea un account</li>
                 </Link>
-                <Link to='/accedi' class='flex items-center'>
+                <Link to='/accedi' class='flex items-center' onClick={() => setOpen(false)}>
                     <img src={chat} width={40} height={40} alt='chat'/>
                     <li>accedi</li>
                 </Link>
