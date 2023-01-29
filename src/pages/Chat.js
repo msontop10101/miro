@@ -11,7 +11,7 @@ const Chat = () => {
     const [val, setVal] = useState('')
     return (
         <>
-            <div class='flex h-[100vh]'>
+            <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
                         <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus /><p>New chat</p></div>
@@ -25,9 +25,9 @@ const Chat = () => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full md:w-[80%] bg-black flex flex-col justify-between items-center py-4 relative'>
+                <div class='w-full md:w-[80%] bg-black flex flex-col justify-between py-4'>
                     <div class='chat-box text-white'>
-                        <div class='chat-log flex justify-center h-[100vh] items-center'>
+                        <div class='chat-log flex justify-center'>
                             <div class='chat-message w-[80%] pt-5 flex flex-col gap-5'>
                                 <div class='flex justify-end'>
                                     <div class='avater bg-[#9869e9] w-[80%] p-4 rounded-3xl'>
@@ -47,9 +47,9 @@ const Chat = () => {
                             </div>
                         </div>
                     </div>
-                    <div class='w-[80%] absolute bottom-14'>
+                    <div class='w-[100%] flex justify-center mb-5 my-10'>
 
-                        <div class='w-[100%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
+                        <div class='w-[80%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
                             <input
                                 id="chat"
                                 name="chat"
