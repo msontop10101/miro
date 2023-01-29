@@ -19,7 +19,7 @@ const Navigations = () => {
                 <nav class='bg-black hidden md:flex items-center justify-between px-10 z-50'>
                     <div>
                         <Link to='/'>
-                            <div class='bg-black flex items-center'>
+                            <div class='flex items-center'>
                                 <img src={logo} width={50} height={50} alt='logo' />
                                 <p class='text-xl ml-1 font-bold text-white'>miro</p>
                             </div>
