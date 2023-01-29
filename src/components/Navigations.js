@@ -11,12 +11,12 @@ import manual from '../assets/manual.png'
 
 const Navigations = () => {
     const [open, setOpen] = useState(false)
-    const [isLoggedin, setIsloggedin] = useState(true)
+    const [isLoggedin, setIsloggedin] = useState(false)
     const [sidebar, setSidebar] = useState(false)
     return (
         <>
             <div class='relative'>
-                <nav class='bg-black hidden md:flex items-center justify-between px-3'>
+                <nav class='bg-black hidden md:flex items-center justify-between px-10 z-50'>
                     <div>
                         <Link to='/'>
                             <div class='bg-black flex items-center'>

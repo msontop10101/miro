@@ -22,7 +22,7 @@ const CreateAccountForm = () => {
   return (
     <div class='w-[100%] text-white'>
       <form onSubmit={formik.handleSubmit} class='flex flex-col gap-10 px-3 py-2'>
-        <div class='flex flex-col w-[60%]'>
+        <div class='flex flex-col w-[60%] md:w-full'>
           <label class='font-bold mb-1 text-lg' htmlFor="name">nome e cognome*</label>
           <input
             id="name"
@@ -36,7 +36,7 @@ const CreateAccountForm = () => {
         </div>
 
 
-        <div class='flex flex-col w-[60%]'>
+        <div class='flex flex-col w-[60%] md:w-full'>
           <label class='font-bold mb-1 text-lg' htmlFor="email">e-mail*</label>
           <input
             id="email"
@@ -48,7 +48,7 @@ const CreateAccountForm = () => {
             style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px' }}
           />
         </div>
-        <div class='flex flex-col w-[60%]'>
+        <div class='flex flex-col w-[60%] md:w-full'>
           <label class='font-bold mb-1 text-lg' htmlFor="name">password*</label>
           <input
             id="password"
@@ -61,7 +61,7 @@ const CreateAccountForm = () => {
           />
         </div>
 
-        <div class='flex flex-col w-[60%]'>
+        <div class='flex flex-col w-[60%] md:w-full'>
           <label class='font-bold mb-1 text-lg' htmlFor="name">conferma password*</label>
           <input
             id="confirmpassword"
@@ -105,7 +105,7 @@ export const LoginForm = () => {
   });
   return (
     <div class='w-[100%] flex justify-center text-white'>
-      <form onSubmit={formik.handleSubmit} class='flex flex-col justify-center gap-10 px-3 py-2'>
+      <form onSubmit={formik.handleSubmit} class='flex flex-col justify-center gap-10 px-3 py-2 md:w-[60%]'>
         <div class='flex flex-col w-[100%]'>
           <label class='font-bold mb-1 text-lg text-center' htmlFor="email">e-mail*</label>
           <input
@@ -133,13 +133,13 @@ export const LoginForm = () => {
 
         <div class='relative'>
           <div class='flex justify-center py-5'>
-            <Link to='/' class='w-[100%] z-40'>
-              <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold uppercase'>Accedi</button>
+            <Link to='/' class='w-[100%] z-40 md:flex justify-center'>
+              <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 '>Accedi</button>
             </Link>
           </div>
-          <div class='absolute bottom-[-70%]'><img src={bgbtn} alt='bgbtn' /></div>
-          <div class='absolute bottom-[-120%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
-          <div class='absolute bottom-[-80%] right-[-25%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-70%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-120%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-80%] right-[-25%]'><img src={bgbtn} alt='bgbtn' /></div>
         </div>
       </form>
     </div>

@@ -16,66 +16,69 @@ import Footerlinks from '../components/Footerlinks'
 const LandingPage = () => {
     return (
         <>
-            <div class='bg-black pb-5 pt-16'>
+            <div class='bg-black pb-5 pt-20'>
                 <div class='px-5 flex items-center justify-center text-white relative overflow-hidden md:overflow-visible'>
                     <div>
-                        <img class='absolute top-[-20%] left-[-30%]' src={one} alt="bg" />
+                        <img class='absolute block md:hidden top-[-20%] left-[-30%]' src={one} alt="bg" />
                         <img class='absolute top-[-35%] right-[-30%]' src={two} alt="bg" />
-                        <img class='absolute bottom-[-10%] right-[-10%]' src={three} alt="bg" />
+                        <img class='absolute block md:hidden bottom-[-10%] right-[-10%]' src={three} alt="bg" />
                     </div>
 
                     <div class='z-40'>
-                    <div >
-                        <h1 class='font-bold text-4xl my-4 leading-[3rem]'>
-                            Il tuo assistente
-                            personale,
-                            a portata di
-                            un click.
-                        </h1>
-                        <p class='font-semibold text-lg my-4'>
-                            Miro è un'intelligenza artificiale
-                            in grado di rispondere a qualsiasi
-                            tua domanda con testi semplici o
-                            complessi in pochi secondi.
-                        </p>
-                        <div class='hidden md:flex gap-2'>
-                            <div><p>disponibile 24/7</p></div>
-                            <div><p>facile da usare</p></div>
-                            <div><p>super-intelligente</p></div>
-                            <div><p>100% gratuito</p></div>
-                        </div>
+                        <div >
+                            <h1 class='font-bold text-4xl my-4 leading-[3rem]'>
+                                Il tuo assistente
+                                personale,
+                                a portata di
+                                un click.
+                            </h1>
+                            <p class='font-semibold text-lg my-4'>
+                                Miro è un'intelligenza artificiale
+                                in grado di rispondere a qualsiasi
+                                tua domanda con testi semplici o
+                                complessi in pochi secondi.
+                            </p>
+                            <div class='hidden md:flex gap-2'>
+                                <div><p>disponibile 24/7</p></div>
+                                <div><p>facile da usare</p></div>
+                                <div><p>super-intelligente</p></div>
+                                <div><p>100% gratuito</p></div>
+                            </div>
 
-                        <div class=''>
-                            <div class=' w-[80%] flex flex-col font-bold gap-2 mt-2 md:hidden'>
-                                <div class='flex justify-between'>
-                                    <p>disponibile 24/7</p>
-                                    <p>facile da usare</p>
-                                </div>
-                                <div class='flex justify-between'>
-                                    <p>super-intelligente</p>
-                                    <p>100% gratuito</p>
+                            <div class=''>
+                                <div class=' w-[80%] flex flex-col font-bold gap-2 mt-2 md:hidden'>
+                                    <div class='flex justify-between'>
+                                        <p>disponibile 24/7</p>
+                                        <p>facile da usare</p>
+                                    </div>
+                                    <div class='flex justify-between'>
+                                        <p>super-intelligente</p>
+                                        <p>100% gratuito</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class='relative'>
-                            <div class='flex justify-center py-5'>
-                                <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
+                            <div class='relative'>
+                                <div class='flex justify-center py-5'>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
+                                </div>
+                                <div class='absolute bottom-[-120%] md:hidden'><img src={bgbtn} alt='bgbtn' /></div>
                             </div>
-                            <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
-                        </div>
 
-                    </div>
+                        </div>
                     </div>
 
 
                 </div>
 
                 <div class='text-white mt-5 px-3 flex flex-col'>
-                    <p class='font-bold text-4xl leading-[3rem] text-left'>Aumenta la tua<br/>
-                        produttività<br/>
+                    <p class='font-bold text-4xl leading-[3rem] text-left block md:hidden'>Aumenta la tua<br />
+                        produttività<br />
                         del 200%</p>
-                    <div><img src={phone} alt="phone" /></div>
+                    <p class='font-bold text-4xl leading-[3rem] text-left md:text-center hidden md:block '>Aumenta la tua
+                        produttività
+                        del 200%</p>
+                    <div class='flex justify-center'><img src={phone} alt="phone" /></div>
                 </div>
 
                 <div class='text-white px-3 relative block md:flex justify-center'>
