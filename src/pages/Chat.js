@@ -11,7 +11,7 @@ const Chat = () => {
     const [val, setVal] = useState('')
     return (
         <>
-            <div class='flex h-[90vh]'>
+            <div class='flex h-[100vh]'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
                         <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus /><p>New chat</p></div>
