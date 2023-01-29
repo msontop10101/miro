@@ -5,6 +5,7 @@ import Accedi from './pages/Accedi';
 import CreateAccount from './pages/CreateAccount';
 import LandingPage from './pages/LandingPage';
 import Sitefooter from './components/SiteFooter';
+import Chat from './pages/Chat';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<LandingPage />}></Route>
         <Route path='/crea-un-account' element={<CreateAccount />}>crea un account</Route>
         <Route path='/accedi' element={<Accedi />}>Accedi</Route>
+        <Route path='/chat' element={<Chat />}></Route>
       </Routes>
       <Sitefooter/>
     </>

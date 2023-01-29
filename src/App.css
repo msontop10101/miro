@@ -46,3 +46,7 @@
 .footerlinks li {
   padding: 5px 0px 5px 0px;
 }
+
+input::placeholder {
+  color: white;
+}
