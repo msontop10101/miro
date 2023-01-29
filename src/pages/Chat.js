@@ -3,7 +3,7 @@ import { FaPlus } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsMoon } from 'react-icons/bs'
 import { FiExternalLink } from 'react-icons/fi'
-import { MdOutlineLogout, MdSend } from 'react-icons/md'
+import { MdOutlineLogout} from 'react-icons/md'
 import send from '../assets/sendimg.png'
 import '../App.css'
 

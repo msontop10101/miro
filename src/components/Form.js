@@ -132,14 +132,14 @@ export const LoginForm = () => {
         </div>
 
         <div class='relative'>
-          <div class='flex justify-center py-5'>
-            <Link to='/' class='w-[100%] z-40 md:flex justify-center'>
-              <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 '>Accedi</button>
+          <div class='flex justify-center py-5 '>
+            <Link to='/' class='w-[100%] z-40 flex justify-center'>
+              <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 '>Accedi</button>
             </Link>
           </div>
-          <div class='absolute md:hidden bottom-[-70%]'><img src={bgbtn} alt='bgbtn' /></div>
-          <div class='absolute md:hidden bottom-[-120%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
-          <div class='absolute md:hidden bottom-[-80%] right-[-25%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-90%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-140%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-130%] right-[-50%]'><img src={bgbtn} alt='bgbtn' /></div>
         </div>
       </form>
     </div>

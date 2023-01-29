@@ -7,8 +7,8 @@ import '../App.css'
 const CreateAccount = () => {
   return (
     <>
-      <div class='w-full bg-black px-3 h-screen'>
-        <div class='flex justify-center flex-col w-full relative'>
+      <div class='w-full bg-black px-3 h-screen flex'>
+        <div class='flex justify-center flex-col w-full relative items-center'>
         <h1 class='text-white text-4xl font-bold mb-2 leading-[4rem] z-30'>CREA IL TUO ACCOUNT</h1>
         <CreateAccountForm/>
         <div class='absolute top-[-20%] left-[-30%]'>
