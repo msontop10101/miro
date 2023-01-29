@@ -2,11 +2,12 @@ import React from 'react'
 import CreateAccountForm from '../components/Form'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
+import '../App.css'
 
 const CreateAccount = () => {
   return (
     <>
-      <div class='w-full bg-black px-3'>
+      <div class='w-full bg-black px-3 h-screen'>
         <div class='flex justify-center flex-col w-full relative'>
         <h1 class='text-white text-4xl font-bold mb-2 leading-[4rem] z-30'>CREA IL TUO ACCOUNT</h1>
         <CreateAccountForm/>

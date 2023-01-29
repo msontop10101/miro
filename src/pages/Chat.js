@@ -11,7 +11,7 @@ const Chat = () => {
     const [val, setVal] = useState('')
     return (
         <>
-            <div class='flex'>
+            <div class='flex h-[90vh] relative'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
                         <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus /><p>New chat</p></div>
@@ -26,7 +26,7 @@ const Chat = () => {
                     </div>
                 </div>
                 <div class='w-full md:w-[80%] bg-black flex flex-col justify-between py-4'>
-                    <div class='chat-box text-white'>
+                    <div class='chat-box text-white absolute bottom-40'>
                         <div class='chat-log flex justify-center'>
                             <div class='chat-message w-[80%] pt-5 flex flex-col gap-5'>
                                 <div class='flex justify-end'>
@@ -47,7 +47,7 @@ const Chat = () => {
                             </div>
                         </div>
                     </div>
-                    <div class='w-[100%] flex justify-center mb-5 my-10'>
+                    <div class='w-[100%] flex justify-center mb-5 my-10 absolute bottom-10'>
 
                         <div class='w-[80%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
                             <input
