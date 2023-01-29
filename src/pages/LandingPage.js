@@ -72,7 +72,7 @@ const LandingPage = () => {
                 </div>
 
                 <div class='text-white mt-5 px-3 flex flex-col'>
-                    <p class='font-bold text-4xl leading-[3rem] text-left block md:hidden'>Aumenta la tua<br />
+                    <p class='font-bold text-4xl leading-[3.5rem] text-left block md:hidden'>Aumenta la tua<br />
                         produttività<br />
                         del 200%</p>
                     <p class='font-bold text-4xl leading-[3rem] text-left md:text-center hidden md:block '>Aumenta la tua
@@ -169,11 +169,11 @@ const LandingPage = () => {
                 <div class='text-white my-3 px-3 flex justify-center'>
                     <div>
                         <h1 class='font-bold text-4xl my-3'>Il futuro è oggi.</h1>
-                        <p class='text-lg font-semibold'>Crea ora il tuo account e inizia a
+                        <p class='text-lg font-semibold my-3'>Crea ora il tuo account e inizia a
                             sfruttare l'intero universo di
                             conoscenza dell'umanità.</p>
                         <div class='relative'>
-                            <div class='flex justify-center py-5 z-40'>
+                            <div class='flex justify-center py-5 z-40 mb-5'>
                                 <Link to='/crea-un-account' class='w-[80%] z-40'>
                                     <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
