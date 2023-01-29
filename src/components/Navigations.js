@@ -37,11 +37,11 @@ const Navigations = () => {
                     </ul>
                 </nav>
 
-                <div class={isLoggedin ? 'hidden' : 'block relative'}>
+                <div class={isLoggedin ? 'hidden' : 'block relative pb-20 bg-black'}>
                     <nav class='z-50 block md:hidden px-3 py-4 bg-black/30 backdrop-blur-md fixed top-0 right-0 left-0'>
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
-                                <div class='bg-black flex items-center'>
+                                <div class=' flex items-center'>
                                     <img src={logo} width={50} height={50} alt='logo' />
                                     <p class='text-xl ml-1 font-bold text-white'>miro</p>
                                 </div>
@@ -69,7 +69,7 @@ const Navigations = () => {
                     </div>
                     <div>
                         <Link to='/'>
-                            <div class='bg-black flex items-center'>
+                            <div class=' flex items-center'>
                                 <img src={logo} width={30} height={30} alt='logo' />
                                 <p class='text-4xl ml-3 font-bold text-white'>miro</p>
                             </div>

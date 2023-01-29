@@ -21,7 +21,7 @@ const CreateAccountForm = () => {
   });
   return (
     <div class='w-[100%] text-white'>
-      <form onSubmit={formik.handleSubmit} class='flex flex-col gap-10 px-3 py-2'>
+      <form onSubmit={formik.handleSubmit} class='flex flex-col gap-10 px-3'>
         <div class='flex flex-col w-[60%] md:w-full'>
           <label class='font-bold mb-1 text-lg' htmlFor="name">nome e cognome*</label>
           <input
