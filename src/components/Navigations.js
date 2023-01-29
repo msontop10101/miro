@@ -93,7 +93,9 @@ const Navigations = () => {
                             <img src={manual} width={40} height={40} alt='manual' />
                         </div>
                         <div class='flex justify-between'>
-                            <div onClick={() => setIsloggedin(false)}><img src={logout} width={40} height={40} alt='logout' /></div>
+                            <Link to='/accedi'>
+                            <div onClick={() => {setIsloggedin(false); setSidebar(false)}}><img src={logout} width={40} height={40} alt='logout' /></div>
+                            </Link>
                             <div>
                                 <Link to='/'>
                                     <div class='bg-black flex items-center'>
