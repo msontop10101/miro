@@ -28,7 +28,7 @@ const Chat = () => {
                 <div class='w-full md:w-[80%] bg-black flex flex-col justify-between items-center py-4 relative'>
                     <div class='chat-box text-white'>
                         <div class='chat-log flex justify-center h-[100vh] items-center'>
-                            <div class='chat-message w-[80%] pt-[10rem] flex flex-col gap-5'>
+                            <div class='chat-message w-[80%] pt-5 flex flex-col gap-5'>
                                 <div class='flex justify-end'>
                                     <div class='avater bg-[#9869e9] w-[80%] p-4 rounded-3xl'>
                                         <p>Scrivimi 10 articoli sulla guerra in
