@@ -9,6 +9,7 @@ import add from '../assets/add.png'
 import logout from '../assets/logout.png'
 import manual from '../assets/manual.png'
 
+
 const Navigations = () => {
     const [open, setOpen] = useState(false)
     const [isLoggedin, setIsloggedin] = useState(false)

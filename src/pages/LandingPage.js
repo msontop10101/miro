@@ -98,7 +98,7 @@ const LandingPage = () => {
                         <div class='relative'>
                             <div class='flex justify-center py-5'>
                                 <Link to='/crea-un-account' class='w-[80%] z-40'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class=' font-semibold'>CREA IL TUO ACCOUNT</button>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '100%' }} class=' font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
                             <div class='absolute bottom-[-120%] md:bottom-[-350%]'><img src={bgbtn} alt='bgbtn' /></div>
@@ -177,7 +177,7 @@ const LandingPage = () => {
                         <div class='relative'>
                             <div class='flex justify-center py-5 z-40 mb-5'>
                                 <Link to='/crea-un-account' class='w-[80%] z-40'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '100%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
                             <div class='absolute bottom-[-180%] md:bottom-[-350%] left-[-20%]'><img src={bgbtn} alt='bgbtn' /></div>
