@@ -4,13 +4,17 @@ import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsMoon } from 'react-icons/bs'
 import { FiExternalLink } from 'react-icons/fi'
 import { MdOutlineLogout} from 'react-icons/md'
-import send from '../assets/sendimg.png'
+import send from '../assets/sendimg.png' 
+import { useAuthContext } from '../context/auth/auth'
+import { Navigate, redirect, useNavigate } from 'react-router-dom'
 import '../App.css'
 
 const Chat = () => {
     const [val, setVal] = useState('')
+    const {isAuth} = useAuthContext()
     return (
         <>
+            {!isAuth? <Navigate to={'/accedi'} />:null}
             <div class='flex h-[90vh] relative'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>

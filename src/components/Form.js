@@ -12,10 +12,10 @@ const CreateAccountForm = () => {
   // at us.
   const formik = useFormik({
     initialValues: {
-      fullname: '',
+      username: '',
       email: '',
       password: '',
-      confirmpassword: '',
+      // confirmpassword: '',
     },
     onSubmit: values => {
       // alert(JSON.stringify(values, null, 2));
@@ -25,15 +25,16 @@ const CreateAccountForm = () => {
   return (
     <div class='w-[100%] text-white'>
       <form onSubmit={formik.handleSubmit} class='flex flex-col gap-10 px-3'>
+        <div class='z-50 flex flex-col gap-6'>
         <div class='flex flex-col w-[60%] md:w-full'>
-          <label class='font-bold mb-1 text-lg' htmlFor="name">nome e cognome*</label>
+          <label class='font-bold mb-1 text-lg' htmlFor="username">nome e cognome*</label>
           <input
-            id="name"
-            name="name"
+            id="username"
+            name="username"
             type="text"
             onChange={formik.handleChange}
             placeholder='Inserisci qui il testo'
-            value={formik.values.name}
+            value={formik.values.username}
             style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px' }}
           />
         </div>
@@ -59,7 +60,7 @@ const CreateAccountForm = () => {
             type="text"
             onChange={formik.handleChange}
             placeholder='Inserisci qui il testo'
-            value={formik.values.phone}
+            value={formik.values.password}
             style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px' }}
           />
         </div>
@@ -72,17 +73,19 @@ const CreateAccountForm = () => {
             type="text"
             onChange={formik.handleChange}
             placeholder='Inserisci qui il testo'
-            value={formik.values.phone}
+            value={formik.values.confirmpassword}
             style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px' }}
           />
         </div>
 
-        <div class='relative w-[100vw]'>
-          <div class='flex justify-center py-5'>
+        <div class='z-50 relative w-[100vw]'>
+          <div class='flex z-50 justify-center py-5'>
             <button type="submits" style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold md:border-2 border-white'>ISCRIVITI</button>
           </div>
-          <div class='absolute md:hidden bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+          
         </div>
+        </div>
+        <div><div class='absolute md:hidden bottom-0'><img src={bgbtn} alt='bgbtn' /></div></div>
       </form>
     </div>
   );
@@ -122,12 +125,12 @@ export const LoginForm = () => {
             style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px' }}
           />
         </div>
-        <div class='flex flex-col w-[100%]'>
+        <div class='flex z-50 flex-col w-[100%]'>
           <label class='font-bold mb-1 text-lg text-center' htmlFor="password">password*</label>
           <input
             id="password"
             name="password"
-            type="text"
+            type="password"
             onChange={formik.handleChange}
             placeholder='Inserisci qui il testo'
             value={formik.values.password}
@@ -140,9 +143,11 @@ export const LoginForm = () => {
             <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 '>Accedi</button>
 
           </div>
+          <div>
           <div class='absolute md:hidden bottom-[-90%]'><img src={bgbtn} alt='bgbtn' /></div>
           <div class='absolute md:hidden bottom-[-140%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
           <div class='absolute md:hidden bottom-[-130%] right-[-50%]'><img src={bgbtn} alt='bgbtn' /></div>
+          </div>
         </div>
       </form>
     </div>

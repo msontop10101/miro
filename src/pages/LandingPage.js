@@ -27,19 +27,19 @@ const LandingPage = () => {
 
                     <div class='z-40'>
                         <div >
-                            <h1 class='font-bold text-4xl my-4 leading-[3rem]'>
+                            <h1 class='font-bold header-font text-4xl my-4 leading-[3rem]'>
                                 Il tuo assistente
                                 personale,
                                 a portata di
                                 un click.
                             </h1>
-                            <p class='font-semibold text-lg my-4'>
+                            <p class=' text-lg body-font my-4'>
                                 Miro è un'intelligenza artificiale
                                 in grado di rispondere a qualsiasi
                                 tua domanda con testi semplici o
                                 complessi in pochi secondi.
                             </p>
-                            <div class='hidden md:flex gap-2'>
+                            <div class='hidden body-font md:flex gap-2'>
                                 <div><p>disponibile 24/7</p></div>
                                 <div><p>facile da usare</p></div>
                                 <div><p>super-intelligente</p></div>
@@ -47,7 +47,7 @@ const LandingPage = () => {
                             </div>
 
                             <div class=''>
-                                <div class=' w-[80%] flex flex-col font-bold gap-2 mt-2 md:hidden'>
+                                <div class=' w-[100%] flex flex-col font-semibold body-font gap-2 mt-2 md:hidden'>
                                     <div class='flex justify-between'>
                                         <p>disponibile 24/7</p>
                                         <p>facile da usare</p>
@@ -73,10 +73,10 @@ const LandingPage = () => {
                 </div>
 
                 <div class='text-white mt-5 px-3 flex flex-col'>
-                    <p class='font-bold text-4xl leading-[3.5rem] text-left block md:hidden'>Aumenta la tua<br />
+                    <p class='font-bold header-font text-4xl leading-[3.5rem] text-left block md:hidden'>Aumenta la tua<br />
                         produttività<br />
                         del 200%</p>
-                    <p class='font-bold text-4xl leading-[3rem] text-left md:text-center hidden md:block '>Aumenta la tua
+                    <p class='font-bold header-font text-4xl leading-[3rem] text-left md:text-center hidden md:block '>Aumenta la tua
                         produttività
                         del 200%</p>
                     <div class='flex justify-center'><img src={phone} alt="phone" /></div>
@@ -84,8 +84,8 @@ const LandingPage = () => {
 
                 <div class='text-white px-3 relative block md:flex justify-center'>
                     <div class='w-full md:w-[50%]'>
-                        <h1 class='text-4xl font-bold mb-5 md:mb-0'>Come funziona</h1>
-                        <p class='font-semibold'>Miro è semplicissimo da usare:
+                        <h1 class='text-4xl header-font font-bold mb-5 md:mb-0'>Come funziona</h1>
+                        <p class='body-font'>Miro è semplicissimo da usare:
                             ti basterà creare un account e avrai
                             subito accesso al tuo assistente
                             personale gratuitamente.
@@ -94,7 +94,7 @@ const LandingPage = () => {
                             lunghezza e complessità a tua scelta
                             che sembra scritto da un essere
                             umano</p>
-                        <p class='font-bold text-lg py-2 mt-3'>provalo per crederci</p>
+                        <p class='font-semibold sub-body-font text-lg py-2 mt-3'>provalo per crederci</p>
                         <div class='relative'>
                             <div class='flex justify-center py-5'>
                                 <Link to='/crea-un-account' class='w-[80%] z-40'>
@@ -115,22 +115,23 @@ const LandingPage = () => {
                 </div>
 
                 <div class='my-3 md:my-10 px-3 z-40 relative flex justify-center '>
-                    <div class='w-full md:w-[80%]'>
-                        <div>
-                            <img class='absolute opacity-70 top-[-25%] left-[-20%]' src={two} alt="bg" />
-                            <img class='absolute opacity-70 top-[20%] right-[-30%]' src={three} alt="bg" />
-                            <img class='absolute opacity-25 bottom-[-30%] left-[-30%]' src={one} alt="bg" />
-                        </div>
-                        <p class='font-bold text-4xl text-white text-left leading-[3rem] block md:hidden mb-2'>Cosa puoi<br />
+                    <div>
+                        <img class='absolute opacity-70 top-[-25%] left-[-20%]' src={two} alt="bg" />
+                        <img class='absolute opacity-70 top-[20%] right-[-30%]' src={three} alt="bg" />
+                        <img class='absolute opacity-25 bottom-[-30%] left-[-30%]' src={one} alt="bg" />
+                    </div>
+                    <div class='w-full z-50 md:w-[80%]'>
+
+                        <p class='font-bold header-font z-50 text-4xl text-white text-left leading-[4rem] block md:hidden mb-2'>Cosa puoi<br />
                             chiedergli?</p>
-                        <p class='font-bold text-4xl text-white text-center hidden md:block'>Cosa puoi
+                        <p class='font-bold header-font z-50 text-4xl text-white text-center hidden md:block'>Cosa puoi
                             chiedergli?</p>
                         <div class='z-40'>
                             <div class='flex gap-4 py-6 w-full md:w-[45%]'>
                                 <div><img src={question} alt="question" /></div>
                                 <div class='text-white'>
-                                    <h1 class='font-bold text-lg mb-4'>domande</h1>
-                                    <p>Puoi fare qualsiasi domanda e
+                                    <h1 class='font-semibold sub-body-font text-lg mb-4'>domande</h1>
+                                    <p class='small-body-font'>Puoi fare qualsiasi domanda e
                                         Miro sarà sempre in grado di
                                         fornirti una risposta dettagliata
                                         e corretta</p>
@@ -140,8 +141,8 @@ const LandingPage = () => {
                                 <div class='flex gap-4 py-4 w-full md:w-[45%]'>
                                     <div><img src={design} alt="design" /></div>
                                     <div class='text-white'>
-                                        <h1 class='font-bold text-normal mb-4'>idee</h1>
-                                        <p>Manchi di creatività? Non ti
+                                        <h1 class='font-semibold sub-body-font text-normal mb-4'>idee</h1>
+                                        <p class='small-body-font'>Manchi di creatività? Non ti
                                             preoccupare, con il tuo nuovo
                                             assistente fare brainstorming
                                             non sarà più un problema</p>
@@ -151,8 +152,8 @@ const LandingPage = () => {
                             <div class='flex gap-4 py-4 w-full md:w-[45]'>
                                 <div><img src={laptop} alt="laptop" /></div>
                                 <div class='text-white'>
-                                    <h1 class='font-bold text-lg mb-4'>scrivere</h1>
-                                    <p>Miro è in grado di scrivere e
+                                    <h1 class='font-semibold sub-body-font text-lg mb-4'>scrivere</h1>
+                                    <p class='small-body-font'>Miro è in grado di scrivere e
                                         modificare qualsiasi tipo di
                                         testo: da ricerche ad articoli, a
                                         contratti e molto altro</p>
@@ -169,8 +170,8 @@ const LandingPage = () => {
 
                 <div class='text-white my-3 px-3 flex justify-center'>
                     <div>
-                        <h1 class='font-bold text-4xl my-3'>Il futuro è oggi.</h1>
-                        <p class='text-lg font-semibold my-3'>Crea ora il tuo account e inizia a
+                        <h1 class='font-bold header-font my-3'>Il futuro è oggi.</h1>
+                        <p class=' body-font my-3'>Crea ora il tuo account e inizia a
                             sfruttare l'intero universo di
                             conoscenza dell'umanità.</p>
                         <div class='relative'>

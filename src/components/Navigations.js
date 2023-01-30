@@ -16,7 +16,7 @@ const Navigations = () => {
     return (
         <>
             <div class='relative'>
-                <nav class='bg-black hidden md:flex items-center justify-between px-10 z-50'>
+                <nav class='bg-[#1c2022] hidden md:flex items-center justify-between px-10 z-50'>
                     <div>
                         <Link to='/'>
                             <div class='flex items-center'>
