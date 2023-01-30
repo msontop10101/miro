@@ -11,10 +11,10 @@ const CreateAccount = () => {
         <div class='flex justify-center flex-col w-full relative items-center'>
         <h1 class='text-white text-4xl font-bold mb-2 leading-[4rem] z-30'>CREA IL TUO ACCOUNT</h1>
         <CreateAccountForm/>
-        <div class='absolute top-[-20%] left-[-30%]'>
+        <div class='absolute md:hidden top-[-20%] left-[-30%]'>
           <img src={two} alt='two'/>
         </div>
-        <div class='absolute top-30 right-[-45%]'>
+        <div class='absolute md:hidden top-30 right-[-45%]'>
           <img src={three} alt='three'/>
         </div>
         </div>

@@ -74,13 +74,13 @@ const CreateAccountForm = () => {
           />
         </div>
 
-        <div class='relative'>
+        <div class='relative w-[100vw]'>
           <div class='flex justify-center py-5'>
             <Link to='/' class='w-[80%] z-40'>
-              <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>ISCRIVITI</button>
+              <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold md:border-2 border-white'>ISCRIVITI</button>
             </Link>
           </div>
-          <div class='absolute bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
+          <div class='absolute md:hidden bottom-[-120%]'><img src={bgbtn} alt='bgbtn' /></div>
         </div>
       </form>
     </div>
