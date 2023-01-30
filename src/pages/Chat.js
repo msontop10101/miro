@@ -25,7 +25,7 @@ const Chat = () => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full md:w-[80%] bg-black flex flex-col justify-between py-4'>
+                <div class='w-full md:w-[80%] bg-[#1c2022] flex flex-col justify-between py-4'>
                     <div class='chat-box text-white absolute bottom-40'>
                         <div class='chat-log flex justify-center'>
                             <div class='chat-message w-[80%] pt-5 flex flex-col gap-5'>

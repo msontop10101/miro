@@ -15,8 +15,9 @@ import Footerlinks from '../components/Footerlinks'
 
 const LandingPage = () => {
     return (
+        // #
         <>
-            <div class='bg-black pb-5 overflow-hidden'>
+            <div class='bg-[#1c2022] pb-5 overflow-hidden'>
                 <div class='px-5 flex items-center justify-center text-white relative overflow-hidden md:overflow-visible'>
                     <div>
                         <img class='absolute block md:hidden top-[-20%] left-[-30%]' src={one} alt="bg" />

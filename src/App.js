@@ -6,9 +6,11 @@ import CreateAccount from './pages/CreateAccount';
 import LandingPage from './pages/LandingPage';
 import Sitefooter from './components/SiteFooter';
 import Chat from './pages/Chat';
+import { useAuthContext } from './context/auth/auth';
 
 
 function App() {
+  const {isAuth} = useAuthContext()
   return (
     <>
       <Navigations />

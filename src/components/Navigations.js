@@ -37,8 +37,8 @@ const Navigations = () => {
                     </ul>
                 </nav>
 
-                <div class={isLoggedin ? 'hidden' : 'block relative pb-20 bg-black'}>
-                    <nav class='z-50 block md:hidden px-3 py-4 bg-black/30 backdrop-blur-md fixed top-0 right-0 left-0'>
+                <div class={isLoggedin ? 'hidden' : 'block relative pb-20 bg-[#1c2022]'}>
+                    <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022]/30 backdrop-blur-md fixed top-0 right-0 left-0'>
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
                                 <div class=' flex items-center'>
@@ -63,7 +63,7 @@ const Navigations = () => {
                     </nav>
                 </div>
 
-                {isLoggedin && <nav class='z-30 flex justify-between items-center md:hidden px-8 py-4 bg-black'>
+                {isLoggedin && <nav class='z-30 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022]'>
                     <div class='flex justify-between items-center pr-3'>
                         <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
                     </div>
