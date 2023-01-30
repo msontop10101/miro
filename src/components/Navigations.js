@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logoicon.jpeg'
+import logo from '../assets/logo3.png'
 import './Navigations.css'
 import profile from '../assets/profile.png'
 import chat from '../assets/chat.png'
