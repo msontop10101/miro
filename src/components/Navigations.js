@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/logo3.png'
+import logo from '../assets/mironewlogo.jpeg'
 import './Navigations.css'
 import profile from '../assets/profile.png'
 import chat from '../assets/chat.png'
@@ -21,8 +21,8 @@ const Navigations = () => {
                     <div>
                         <Link to='/'>
                             <div class='flex items-center'>
-                                <img src={logo} width={50} height={50} alt='logo' />
-                                <p class='text-xl ml-1 font-bold text-white'>miro</p>
+                                <img src={logo} width={200} height={200} alt='logo' />
+                                {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
                             </div>
                         </Link>
                     </div>
@@ -43,8 +43,8 @@ const Navigations = () => {
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
                                 <div class=' flex items-center'>
-                                    <img src={logo} width={50} height={50} alt='logo' />
-                                    <p class='text-xl ml-1 font-bold text-white'>miro</p>
+                                    <img src={logo} width={200} height={200} alt='logo' />
+                                    {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
                                 </div>
                             </Link>
                             <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu' /></div>
