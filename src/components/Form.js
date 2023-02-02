@@ -15,11 +15,12 @@ const CreateAccountForm = () => {
       username: '',
       email: '',
       password: '',
-      // confirmpassword: '',
+      confirmpassword: '',
     },
-    onSubmit: values => {
+    onSubmit: (values, {resetForm}) => {
       // alert(JSON.stringify(values, null, 2));
       signup(values)
+      resetForm({values: ''})
     },
   });
   return (
@@ -57,7 +58,7 @@ const CreateAccountForm = () => {
           <input
             id="password"
             name="password"
-            type="text"
+            type="password"
             onChange={formik.handleChange}
             placeholder='Inserisci qui il testo'
             value={formik.values.password}
@@ -70,7 +71,7 @@ const CreateAccountForm = () => {
           <input
             id="confirmpassword"
             name="confirmpassword"
-            type="text"
+            type="password"
             onChange={formik.handleChange}
             placeholder='Inserisci qui il testo'
             value={formik.values.confirmpassword}

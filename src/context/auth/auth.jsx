@@ -4,14 +4,15 @@ import { useState, useContext } from "react";
 import { loginUser } from "./comp/Login";
 
 export const AuthContext = React.createContext({
-    isAuth: localStorage.getItem('access') !== null || localStorage.getItem('access') !== undefined ?true:false,
+    isAuth: false,
     access: localStorage.getItem('access'),
-    refresh: localStorage.getItem('refresh'),
+    // refresh: localStorage.getItem('refresh'),
     user: localStorage.getItem('user'),
     error: "",
     success: false,
     loading: false,
     login: (value) => {},
+    logout: () => {}
 });
 
 
@@ -19,41 +20,52 @@ export const AuthProvider = ( { children }) => {
     const [success, setsucess] = useState(false);
     const [error, setError] = useState("");
     const [loading, setIsloading] = useState(false)
-
+    const [isAuth, setisAuth] = useState(false)
     const Login = (details) => {
+      // console.log(details)
       setIsloading(true)
       loginUser(details)
         .then((res) => {
-          console.log(res.data)
+          console.log(res.data.data.email, "token")
           setsucess(true);
           setError("");
-          localStorage.setItem('access', res.data.access)
-          localStorage.setItem('refresh', res.data.refresh)
-          localStorage.setItem('user', res.data.user)
+          setisAuth(true)
+          localStorage.setItem('access', res.data.data.token)
+          // localStorage.setItem('refresh', res.data.refresh)
+          localStorage.setItem('user', res.data.data.email)
           setIsloading(false)
       })
       .catch((err) => {
         console.log(err)
-          setIsloading(true)
           setIsloading(false)
           setsucess(false);
+          setisAuth(false)
           setError(err.response);
-          localStorage.setItem('access', null)
-          localStorage.setItem('refresh', null)
-          localStorage.setItem('user', null)
+          localStorage.removeItem('access')
+          // localStorage.removeItem('refresh', null)
+          localStorage.removeItem('user')
       })
 };
+      const logout = () => {
+        console.log('logging out');
+        localStorage.removeItem('access')
+        setIsloading(false)
+        setError("")
+        setisAuth(false)
+        localStorage.removeItem('user')
+      }
     return (
       <AuthContext.Provider
         value={{
-          isAuth: localStorage.getItem('access')?true:false,
+          isAuth: isAuth,
           access: localStorage.getItem('access'),
-          refresh: localStorage.getItem('refresh'),
+          // refresh: localStorage.getItem('refresh'),
           user: localStorage.getItem('user'),
           error,
           success,
           loading,
           login: Login,
+          logout
         }}
       >
         {children}
