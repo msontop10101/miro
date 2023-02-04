@@ -12,14 +12,7 @@ import '../App.css'
 const Chat = () => {
     const [input, setInput] = useState('')
     const [chatLog, setChatLog] = useState([
-        {
-            user: 'me',
-            message: 'I want to use chatgpt today'
-        },
-        {
-            user: 'gpt',
-            message: 'How can i help you?'
-        }
+        
     ])
     const { isAuth } = useAuthContext()
     async function handleSubmit(e) {
