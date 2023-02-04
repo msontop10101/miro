@@ -66,8 +66,8 @@ const Navigations = () => {
                     </nav>
                 </div>
 
-                <div className='relative mb-20 bg-[black]'>
-                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022]/90 backdrop-blur-md fixed top-0 right-0 left-0'>
+                <div className='relative pb-20 bg-[black]'>
+                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
                     <div class='flex justify-between items-center pr-3'>
                         <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
                     </div>
