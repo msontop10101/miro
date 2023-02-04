@@ -60,10 +60,12 @@ const LandingPage = () => {
                             </div>
 
                             <div class='relative'>
-                                <div class='flex justify-center py-5'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '80%' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
+                                <div class='flex justify-center py-5 w-[100%]'>
+                                    <Link to='/crea-un-account'>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '300px' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
+                                    </Link>
                                 </div>
-                                <div class='absolute bottom-[-120%] md:hidden'><img src={bgbtn} alt='bgbtn' /></div>
+                                {/* <div class='absolute bottom-[-120%] md:hidden'><img src={bgbtn} alt='bgbtn' /></div> */}
                             </div>
 
                         </div>
