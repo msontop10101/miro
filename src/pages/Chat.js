@@ -53,7 +53,7 @@ const Chat = () => {
                 </div>
                 <div class='w-full z-30 md:w-[80%] bg-[#1c2022] flex flex-col justify-between py-4' style={{minHeight:"100vh"}}>
                     <div className='flex z-30 justify-center'>
-                    <div class='chat-box h-[100%] text-white w-[80%]' style={{overflow:'scroll'}}>
+                    <div class='chat-box h-[100%] text-white w-[80%] pt-[20%] md:pt-[0%]' style={{overflow:'scroll'}}>
                         <div class='chat-log z-20 flex flex-col justify-center'>
                             {chatLog.map((message, index) => (
                                 <ChatMessage key={index} message={message} />
