@@ -66,7 +66,8 @@ const Navigations = () => {
                     </nav>
                 </div>
 
-                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022]'>
+                <div className='relative mb-20 bg-[black]'>
+                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022]/90 backdrop-blur-md fixed top-0 right-0 left-0'>
                     <div class='flex justify-between items-center pr-3'>
                         <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
                     </div>
@@ -81,6 +82,7 @@ const Navigations = () => {
                         <img src={profile} width={30} height={40} alt='profile' />
                     </div>
                 </div>}
+                </div>
                 {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                     <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
                         <div class='flex justify-end' onClick={() => setSidebar(!sidebar)}><img src={menu} width={40} height={40} alt='menu' /></div>

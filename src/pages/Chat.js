@@ -37,7 +37,7 @@ const Chat = () => {
     return (
         <>
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
-            <div class='flex h-[90vh] relative'>
+            <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
                         <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus /><p>New chat</p></div>
@@ -51,9 +51,9 @@ const Chat = () => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] flex flex-col justify-between py-4'>
+                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] flex flex-col justify-between py-4' style={{minHeight:"100vh"}}>
                     <div className='flex z-30 justify-center'>
-                    <div class='chat-box h-[100%] text-white w-[80%] absolute bottom-40' style={{overflow:'scroll'}}>
+                    <div class='chat-box h-[100%] text-white w-[80%]' style={{overflow:'scroll'}}>
                         <div class='chat-log z-20 flex flex-col justify-center'>
                             {chatLog.map((message, index) => (
                                 <ChatMessage key={index} message={message} />
@@ -61,23 +61,9 @@ const Chat = () => {
                         </div>
                     </div>
                     </div>
-                    {/* <div class='w-[100%] flex justify-center mb-5 my-10 absolute bottom-10'>
-
-                        <div class='w-[80%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
-                            <input
-                                id="chat"
-                                name="chat"
-                                type='text'
-                                value={input}
-                                onChange={(e) => setInput(e.target.value)}
-                                placeholder='Inserisci qui il testo'
-                                style={{ height: '50px', borderRadius: '10px', width: '100%', outline: 'none', backgroundColor: 'transparent', color: 'white' }}
-                            />
-                            <div class='cursor-pointer'><img src={send} width={30} height={30} alt='send' /></div>
-                        </div>
-                    </div> */}
-                    <div class='w-[100%] flex justify-center mb-5 my-10 absolute bottom-10'>
-                    <form onSubmit={handleSubmit} className='flex justify-center absolute bottom-10 w-full items-center'>
+                    
+                    <div class='w-[100%] flex justify-center mb-5 my-10'>
+                    <form onSubmit={handleSubmit} className='flex justify-center w-full items-center'>
                         <div className='w-[80%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
                             <input
                                 type='text'
