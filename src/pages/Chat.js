@@ -18,6 +18,8 @@ const Chat = () => {
     async function handleSubmit(e) {
         e.preventDefault();
         let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
+        const message = input;
+
         setInput("")
         setChatLog(chatLogNew)
         const messages = chatLogNew.map((message) => message.message).join('')
@@ -27,7 +29,7 @@ const Chat = () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                message: messages
+                message, //: messages
             })
         });
         const data = await response.json();
