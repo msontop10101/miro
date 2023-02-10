@@ -10,7 +10,7 @@ import { Navigate } from 'react-router-dom'
 import '../App.css'
 
 const Chat = () => {
-    const navbarHeight = '3px'
+    const navbarHeight = '78px'
     const footerHeight = '28px'
     const [input, setInput] = useState('')
     const [chatLog, setChatLog] = useState([
@@ -47,7 +47,7 @@ const Chat = () => {
     }
     return (
         <>
-            {!isAuth ? <Navigate to={'/accedi'} /> : null}
+            {/* {!isAuth ? <Navigate to={'/accedi'} /> : null} */}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
@@ -65,7 +65,7 @@ const Chat = () => {
                 <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ minHeight: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box h-[100%] text-white w-[90%]' style={{ overflow: 'scroll' }}>
-                            <div class='chat-log justify-center'>
+                            <div class='chat-log justify-center overflow-y-auto' style={{maxHeight: "60vh"}}>
                                 {chatLog.map((message, index) => (
                                     <ChatMessage key={index} message={message} />
                                 ))}
