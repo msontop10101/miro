@@ -2,7 +2,7 @@ import React from "react";
 import bgbtn from '../assets/6.png'
 import { useAuthContext } from '../context/auth/auth';
 import { useSignupContext } from '../context/auth/signup';
-import { Formik, Form, Field, useFormik } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import { Navigate } from 'react-router-dom';
 import { RotatingLines } from 'react-loader-spinner'
@@ -26,7 +26,7 @@ const CreateAccountSchema = Yup.object().shape({
 
 
 const CreateAccountForm = () => {
-  const { signup, success, error, loading } = useSignupContext()
+  const { signup, success, loading } = useSignupContext()
 
 
   return (

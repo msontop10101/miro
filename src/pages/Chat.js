@@ -6,13 +6,22 @@ import { FiExternalLink } from 'react-icons/fi'
 import { MdOutlineLogout } from 'react-icons/md'
 import send from '../assets/sendimg.png'
 import { useAuthContext } from '../context/auth/auth'
-import { Navigate, redirect, useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 import '../App.css'
 
 const Chat = () => {
+    const navbarHeight = '87px'
+    const footerHeight = '28px'
     const [input, setInput] = useState('')
     const [chatLog, setChatLog] = useState([
-        
+        // {
+        //     user: 'me',
+        //     message: 'I want to use chatgpt today111111'
+        // },
+        // {
+        //     user: 'gpt',
+        //     message: 'How can i help you?1111111'
+        // }
     ])
     const { isAuth } = useAuthContext()
     async function handleSubmit(e) {
@@ -22,7 +31,7 @@ const Chat = () => {
 
         setInput("")
         setChatLog(chatLogNew)
-        const messages = chatLogNew.map((message) => message.message).join('')
+        // const messages = chatLogNew.map((message) => message.message).join('')
         const response = await fetch('https://miro-app-chat.onrender.com/', {
             method: 'POST',
             headers: {
@@ -53,33 +62,30 @@ const Chat = () => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] flex flex-col justify-between py-4' style={{minHeight:"100vh"}}>
-                    <div className='flex z-30 justify-center'>
-                    <div class='chat-box h-[100%] text-white w-[80%] pt-[20%] md:pt-[0%]' style={{overflow:'scroll'}}>
-                        <div class='chat-log z-20 flex flex-col justify-center'>
-                            {chatLog.map((message, index) => (
-                                <ChatMessage key={index} message={message} />
-                            ))}
+                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ minHeight: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
+                    <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
+                        <div class='chat-box h-[100%] text-white w-[90%]' style={{ overflow: 'scroll' }}>
+                            <div class='chat-log justify-center'>
+                                {chatLog.map((message, index) => (
+                                    <ChatMessage key={index} message={message} />
+                                ))}
+                            </div>
                         </div>
+
+                        <form onSubmit={handleSubmit} className='flex justify-center w-full items-center'>
+                            <div className='w-[80%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
+                                <input
+                                    type='text'
+                                    rows='1'
+                                    value={input}
+                                    placeholder='Inserisci qui il testo'
+                                    onChange={(e) => setInput(e.target.value)}
+                                    style={{ height: '50px', borderRadius: '10px', width: '100%', outline: 'none', backgroundColor: 'transparent', color: 'white' }}
+                                />
+                                <div class='cursor-pointer'><button type='submit'><img src={send} width={30} height={30} alt='send' /></button></div>
+                            </div>
+                        </form>
                     </div>
-                    </div>
-                    
-                    <div class='w-[100%] flex justify-center mb-5 my-10'>
-                    <form onSubmit={handleSubmit} className='flex justify-center w-full items-center'>
-                        <div className='w-[80%] flex items-center justify-center bg-transparent rounded-[10px] px-4 bottom-0' style={{ border: '2px solid white' }}>
-                            <input
-                                type='text'
-                                rows='1'
-                                value={input}
-                                placeholder='Inserisci qui il testo'
-                                onChange={(e) => setInput(e.target.value)}
-                                style={{ height: '50px', borderRadius: '10px', width: '100%', outline: 'none', backgroundColor: 'transparent', color: 'white' }}
-                            />
-                            <div class='cursor-pointer'><button type='submit'><img src={send} width={30} height={30} alt='send' /></button></div>
-                        </div>
-                    </form>
-                    </div>
-                    
                 </div>
             </div>
         </>
@@ -90,7 +96,7 @@ const ChatMessage = ({ message }) => {
 
 
     return (
-        <div className='odd:flex bg-[#9869e9] text-white even:bg-[white] even:text-[black] my-1 rounded-md p-4'>
+        <div className={`${message.user === 'gpt' ? 'flex justify-start my-1 rounded-xl' : 'flex justify-end my-1 rounded-xl'}`}>
             <div className={`chat-message ${message.user === 'gpt' && 'chatgpt'}`}>
                 <div className='chat-message-center'>
                     <div className={`avater ${message.user === 'gpt' && 'chatgpt'}`}>
