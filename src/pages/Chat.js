@@ -10,7 +10,7 @@ import { Navigate } from 'react-router-dom'
 import '../App.css'
 
 const Chat = () => {
-    const navbarHeight = '87px'
+    const navbarHeight = '3px'
     const footerHeight = '28px'
     const [input, setInput] = useState('')
     const [chatLog, setChatLog] = useState([
