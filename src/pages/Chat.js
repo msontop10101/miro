@@ -14,6 +14,7 @@ const Chat = () => {
     const footerHeight = '28px'
     const bottomRef = useRef(null);
     const [input, setInput] = useState('')
+    const { isAuth } = useAuthContext()
     const [chatLog, setChatLog] = useState([
         // {
         //     user: 'me',
@@ -24,7 +25,6 @@ const Chat = () => {
         //     message: 'How can i help you?1111111'
         // }
     ])
-    const { isAuth } = useAuthContext()
     async function handleSubmit(e) {
         e.preventDefault();
         let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
@@ -48,13 +48,12 @@ const Chat = () => {
     }
 
     useEffect(() => {
-        // 👇️ scroll to bottom every time messages change
         bottomRef.current?.scrollIntoView({behavior: 'smooth'});
       }, [chatLog]);
 
     return (
         <>
-            {/* {!isAuth ? <Navigate to={'/accedi'} /> : null} */}
+            {!isAuth ? <Navigate to={'/accedi'} /> : null}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
@@ -65,7 +64,6 @@ const Chat = () => {
                             <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' onClick={() => setChatLog([ ])}/><p>Clear conversation</p></li>
                             <li class='flex items-center gap-2'><BsMoon size='1.5em' /><p>Dark Mode</p></li>
                             <li class='flex items-center gap-2'><FiExternalLink size='1.5em' /><p>FAQ</p></li>
-                            <li class='flex items-center gap-2'><MdOutlineLogout size='1.5em' /><p>Logout</p></li>
                         </ul>
                     </div>
                 </div>
