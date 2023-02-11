@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsMoon } from 'react-icons/bs'
@@ -12,6 +12,7 @@ import '../App.css'
 const Chat = () => {
     const navbarHeight = '78px'
     const footerHeight = '28px'
+    const bottomRef = useRef(null);
     const [input, setInput] = useState('')
     const [chatLog, setChatLog] = useState([
         // {
@@ -45,6 +46,12 @@ const Chat = () => {
         setChatLog([...chatLogNew, { user: 'gpt', message: `${data.message}` }])
         // console.log(data.message)
     }
+
+    useEffect(() => {
+        // 👇️ scroll to bottom every time messages change
+        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+      }, [chatLog]);
+
     return (
         <>
             {/* {!isAuth ? <Navigate to={'/accedi'} /> : null} */}
@@ -65,10 +72,11 @@ const Chat = () => {
                 <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ minHeight: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box h-[100%] text-white w-[90%]' style={{ overflow: 'scroll' }}>
-                            <div class='chat-log justify-center overflow-y-auto' style={{maxHeight: "60vh"}}>
+                            <div class='chat-log justify-center overflow-y-auto' style={{maxHeight: "70vh"}}>
                                 {chatLog.map((message, index) => (
                                     <ChatMessage key={index} message={message} />
                                 ))}
+                                <div ref={bottomRef} />
                             </div>
                         </div>
 
