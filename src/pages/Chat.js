@@ -58,11 +58,11 @@ const Chat = () => {
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
-                        <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus /><p>New chat</p></div>
+                        <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus onClick={() => setChatLog([ ])}/><p>New chat</p></div>
                     </div>
                     <div class='px-2 py-6' style={{ borderTop: '2px solid #919191' }}>
                         <ul class='flex flex-col gap-2 chat'>
-                            <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' /><p>Clear conversation</p></li>
+                            <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' onClick={() => setChatLog([ ])}/><p>Clear conversation</p></li>
                             <li class='flex items-center gap-2'><BsMoon size='1.5em' /><p>Dark Mode</p></li>
                             <li class='flex items-center gap-2'><FiExternalLink size='1.5em' /><p>FAQ</p></li>
                             <li class='flex items-center gap-2'><MdOutlineLogout size='1.5em' /><p>Logout</p></li>
@@ -71,12 +71,14 @@ const Chat = () => {
                 </div>
                 <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ minHeight: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
-                        <div class='chat-box h-[100%] text-white w-[90%]' style={{ overflow: 'scroll' }}>
-                            <div class='chat-log justify-center overflow-y-auto' style={{maxHeight: "70vh"}}>
+                        <div class='chat-box h-[100%] text-white w-[90%]'>
+                            <div class='chat-log justify-center relative' style={{maxHeight: "70vh"}}>
+                                <div className='h-full overflow-y-scroll'>
                                 {chatLog.map((message, index) => (
                                     <ChatMessage key={index} message={message} />
                                 ))}
                                 <div ref={bottomRef} />
+                                </div>
                             </div>
                         </div>
 
@@ -104,7 +106,7 @@ const ChatMessage = ({ message }) => {
 
 
     return (
-        <div className={`${message.user === 'gpt' ? 'flex justify-start my-1 rounded-xl' : 'flex justify-end my-1 rounded-xl'}`}>
+        <div className={`${message.user === 'gpt' ? 'flex justify-start gap-2 my-1 rounded-xl' : 'flex justify-end gap-2 my-1 rounded-xl'}`}>
             <div className={`chat-message ${message.user === 'gpt' && 'chatgpt'}`}>
                 <div className='chat-message-center'>
                     <div className={`avater ${message.user === 'gpt' && 'chatgpt'}`}>
