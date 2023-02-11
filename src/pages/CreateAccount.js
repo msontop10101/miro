@@ -7,20 +7,20 @@ import '../App.css'
 const CreateAccount = () => {
   return (
     <>
-      <div class='w-full bg-black px-3 h-[100vh] flex'>
+      <div class='w-full overflow-x-hidden bg-black px-3 h-[100vh] flex'>
         <div class='flex z-40 justify-center flex-col w-full relative items-center'>
         <h1 class='text-white text-4xl header-font font-bold mb-2 leading-[4rem] z-30'>CREA IL TUO ACCOUNT</h1>
         <CreateAccountForm/>
         
         </div>
-        <div>
+        {/* <div>
         <div class='absolute top-5 md:hidden top-[-20%] left-[-30%]'>
           <img src={two} alt='two'/>
         </div>
         <div class='absolute bottom-0 md:hidden top-30 right-[-45%]'>
           <img src={three} alt='three'/>
         </div>
-        </div>
+        </div> */}
       </div>
     </>
   )
