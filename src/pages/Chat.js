@@ -10,8 +10,8 @@ import { Navigate } from 'react-router-dom'
 import '../App.css'
 
 const Chat = () => {
-    const navbarHeight = '78px'
-    const footerHeight = '28px'
+    const navbarHeight = '30px'
+    const footerHeight = '2px'
     const bottomRef = useRef(null);
     const [input, setInput] = useState('')
     const { isAuth } = useAuthContext()
@@ -33,7 +33,7 @@ const Chat = () => {
         setInput("")
         setChatLog(chatLogNew)
         // const messages = chatLogNew.map((message) => message.message).join('')
-        const response = await fetch('https://miro-app-chat.onrender.com/', {
+        const response = await fetch('https://304b-197-210-226-137.eu.ngrok.io/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -67,11 +67,11 @@ const Chat = () => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ minHeight: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
+                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ height: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box h-[100%] text-white w-[90%]'>
                             <div class='chat-log justify-center relative' style={{maxHeight: "70vh"}}>
-                                <div className='h-full overflow-y-scroll'>
+                                <div className='h-full overflow-y-auto'>
                                 {chatLog.map((message, index) => (
                                     <ChatMessage key={index} message={message} />
                                 ))}
