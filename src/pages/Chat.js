@@ -25,6 +25,8 @@ const Chat = () => {
         //     message: 'How can i help you?1111111'
         // }
     ])
+    const [loading, setLoading] = useState(false)
+    console.log(loading)
     async function handleSubmit(e) {
         e.preventDefault();
         let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
@@ -32,8 +34,9 @@ const Chat = () => {
 
         setInput("")
         setChatLog(chatLogNew)
+        setLoading(true)
         // const messages = chatLogNew.map((message) => message.message).join('')
-        const response = await fetch('https://304b-197-210-226-137.eu.ngrok.io/', {
+        const response = await fetch('https://student-chat.onrender.com/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -44,6 +47,7 @@ const Chat = () => {
         });
         const data = await response.json();
         setChatLog([...chatLogNew, { user: 'gpt', message: `${data.message}` }])
+        setLoading(false)
         // console.log(data.message)
     }
 
