@@ -79,7 +79,7 @@ const Chat = () => {
                                         <ChatMessage key={index} message={message} />
                                     ))}
                                     {loading && <div><ThreeDots
-                                        height="80"
+                                        height="20"
                                         width="80"
                                         radius="9"
                                         color="#B1A1ED"
