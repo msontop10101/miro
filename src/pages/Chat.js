@@ -3,7 +3,7 @@ import { FaPlus } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
 import { BsMoon } from 'react-icons/bs'
 import { FiExternalLink } from 'react-icons/fi'
-import { MdOutlineLogout } from 'react-icons/md'
+import { ThreeDots } from 'react-loader-spinner'
 import send from '../assets/sendimg.png'
 import { useAuthContext } from '../context/auth/auth'
 import { Navigate } from 'react-router-dom'
@@ -52,8 +52,8 @@ const Chat = () => {
     }
 
     useEffect(() => {
-        bottomRef.current?.scrollIntoView({behavior: 'smooth'});
-      }, [chatLog]);
+        bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, [chatLog]);
 
     return (
         <>
@@ -61,11 +61,11 @@ const Chat = () => {
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
-                        <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus onClick={() => setChatLog([ ])}/><p>New chat</p></div>
+                        <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus onClick={() => setChatLog([])} /><p>New chat</p></div>
                     </div>
                     <div class='px-2 py-6' style={{ borderTop: '2px solid #919191' }}>
                         <ul class='flex flex-col gap-2 chat'>
-                            <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' onClick={() => setChatLog([ ])}/><p>Clear conversation</p></li>
+                            <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' onClick={() => setChatLog([])} /><p>Clear conversation</p></li>
                             <li class='flex items-center gap-2'><BsMoon size='1.5em' /><p>Dark Mode</p></li>
                             <li class='flex items-center gap-2'><FiExternalLink size='1.5em' /><p>FAQ</p></li>
                         </ul>
@@ -74,12 +74,22 @@ const Chat = () => {
                 <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ height: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box h-[100%] text-white w-[90%]'>
-                            <div class='chat-log justify-center relative' style={{maxHeight: "70vh"}}>
+                            <div class='chat-log justify-center relative' style={{ maxHeight: "70vh" }}>
                                 <div className='h-full overflow-y-auto'>
-                                {chatLog.map((message, index) => (
-                                    <ChatMessage key={index} message={message} />
-                                ))}
-                                <div ref={bottomRef} />
+                                    {chatLog.map((message, index) => (
+                                        <ChatMessage key={index} message={message} />
+                                    ))}
+                                    {loading && <div><ThreeDots
+                                        height="80"
+                                        width="80"
+                                        radius="9"
+                                        color="#B1A1ED"
+                                        ariaLabel="three-dots-loading"
+                                        wrapperStyle={{}}
+                                        wrapperClassName=""
+                                        visible={true}
+                                    /></div>}
+                                    <div ref={bottomRef} />
                                 </div>
                             </div>
                         </div>
