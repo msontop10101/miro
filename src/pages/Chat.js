@@ -26,7 +26,6 @@ const Chat = () => {
         // }
     ])
     const [loading, setLoading] = useState(false)
-    console.log(loading)
     async function handleSubmit(e) {
         e.preventDefault();
         let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
