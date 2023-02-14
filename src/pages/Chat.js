@@ -35,7 +35,8 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
     const [loading, setLoading] = useState(false)
     async function handleSubmit(e) {
         e.preventDefault();
-        let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
+        if(input.trim()){
+            let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
         const message = input;
 
         setInput("")
@@ -55,6 +56,7 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
         setChatLog([...chatLogNew, { user: 'gpt', message: `${data.message}` }])
         setLoading(false)
         // console.log(data.message)
+        }
     }
 
     useEffect(() => {
