@@ -11,8 +11,9 @@ const Accedi = () => {
   const { error } = useAuthContext()
   return (
     <>
+    {error && <p className='bg-[#ec6363] z-30 text-white p-2 text-center'>email e password non valide</p>}
       <div class='bg-black relative overflow-hidden z-30'>
-        {error && <p className='bg-[#ec6363] text-white p-2 text-center'>{error}</p>}
+        
         <div class='bg-black flex flex-col justify-center'>
           <div class='flex flex-col justify-center pt-[50px] w-full items-center accedi-height'>
             <h1 class='font-bold text-4xl text-white py-4 text-center'>Accedi</h1>

@@ -20,7 +20,7 @@ export const AuthProvider = ( { children }) => {
     const [success, setsucess] = useState(false);
     const [error, setError] = useState("");
     const [loading, setIsloading] = useState(false)
-    const [isAuth, setisAuth] = useState(false)
+    const [isAuth, setisAuth] = useState(localStorage.getItem('access')?true:false)
     const Login = (details) => {
       // console.log(details)
       setIsloading(true)
