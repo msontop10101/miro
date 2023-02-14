@@ -101,7 +101,7 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
                     <div class='px-2 py-6' style={{ borderTop: '2px solid #919191' }}>
                         <ul class='flex flex-col gap-2 chat'>
                             <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' onClick={() => setChatLog([])} /><p>Clear conversation</p></li>
-                            <li class='flex items-center gap-2'><BsMoon size='1.5em' /><p>Dark Mode</p></li>
+                            {/* <li class='flex items-center gap-2'><BsMoon size='1.5em' /><p>Dark Mode</p></li> */}
                             <li class='flex items-center gap-2'><FiExternalLink size='1.5em' /><p>FAQ</p></li>
                         </ul>
                     </div>
