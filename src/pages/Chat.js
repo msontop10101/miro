@@ -7,14 +7,21 @@ import { ThreeDots } from 'react-loader-spinner'
 import send from '../assets/sendimg.png'
 import { useAuthContext } from '../context/auth/auth'
 import { Navigate } from 'react-router-dom'
+import add from '../assets/add.png'
+import logouticon from '../assets/logouticon.png'
+import manual from '../assets/manual.png'
+import menu from '../assets/menu.png'
+import { Link } from 'react-router-dom'
+import logo from '../assets/mirologo.png'
+
 import '../App.css'
 
-const Chat = () => {
+const Chat = ({sidebarState, setCloseSidebarState}) => {
     const navbarHeight = '30px'
     const footerHeight = '2px'
     const bottomRef = useRef(null);
     const [input, setInput] = useState('')
-    const { isAuth } = useAuthContext()
+    const { isAuth, logout } = useAuthContext()
     const [chatLog, setChatLog] = useState([
         // {
         //     user: 'me',
@@ -54,9 +61,38 @@ const Chat = () => {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chatLog]);
 
+    
+
     return (
         <>
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
+            {sidebarState && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
+                    <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
+                        <div class='flex justify-end' onClick={() => setCloseSidebarState(true)}><img src={menu} width={40} height={40} alt='menu' /></div>
+                        <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img onClick={() => {setLoading(false); setChatLog([ ])}} src={add} width={40} height={40} alt='add' /></div>
+                        <div>
+                            <p class='text-white font-bold text-lg'>Cronologia chat:</p>
+                        </div>
+                    </div>
+                    <div class='flex flex-col gap-10 pt-4' style={{ borderTop: '1px solid gray' }}>
+                        <div class='flex justify-between'>
+                            <p class='font-bold text-lg text-white'>Istruzioni</p>
+                            <img src={manual} width={40} height={40} alt='manual' />
+                        </div>
+                        <div class='flex justify-between'>
+                            <Link to='/accedi'>
+                            <div onClick={() => {logout(); setCloseSidebarState(true)}}><img src={logouticon} width={40} height={40} alt='logout' /></div>
+                            </Link>
+                            <div>
+                                <Link to='/'>
+                                    <div class='bg-black flex items-center'>
+                                        <img src={logo} width={100} height={100} alt='logo' />
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>

@@ -48,11 +48,11 @@ const LandingPage = () => {
 
                             <div class=''>
                                 <div class=' w-[100%] flex flex-col font-semibold body-font gap-2 mt-2 md:hidden'>
-                                    <div class='flex justify-between'>
+                                    <div class='flex flex-col xs:flex-row justify-between'>
                                         <p>disponibile 24/7</p>
                                         <p>facile da usare</p>
                                     </div>
-                                    <div class='flex justify-between'>
+                                    <div class='flex flex-col xs:flex-row justify-between'>
                                         <p>super-intelligente</p>
                                         <p>100% gratuito</p>
                                     </div>

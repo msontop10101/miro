@@ -1,20 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/mirologo.png'
 import './Navigations.css'
 import profile from '../assets/profile.png'
 import chat from '../assets/chat.png'
 import menu from '../assets/menu.png'
-import add from '../assets/add.png'
-import logouticon from '../assets/logouticon.png'
-import manual from '../assets/manual.png'
 import { useAuthContext } from '../context/auth/auth';
 
 
-const Navigations = () => {
-    const {isAuth, logout} = useAuthContext()
+const Navigations = ({ setSidebarState, closeSidebarState }) => {
+    const {isAuth} = useAuthContext()
     const [open, setOpen] = useState(false)
     const [sidebar, setSidebar] = useState(false)
+    setSidebarState(sidebar)
+
+    useEffect(() => {
+      console.log(closeSidebarState)
+      closeSidebarState && setSidebar(false) 
+    }, [closeSidebarState])
+    
     
     return (
         <>
@@ -51,7 +55,7 @@ const Navigations = () => {
                             </Link>
                             <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu' /></div>
                         </div>
-                        <div class='flex justify-center'>
+                        <div class='flex justify-center z-50'>
                             {open && <ul class='navigations flex gap-8 py-2'>
                                 <Link to='/crea-un-account' class='flex items-center gap-2' onClick={() => setOpen(false)}>
                                     <img src={profile} width={40} height={40} alt='profile' />
@@ -83,7 +87,7 @@ const Navigations = () => {
                     </div>
                 </div>}
                 </div>
-                {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
+                {/* {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                     <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
                         <div class='flex justify-end' onClick={() => setSidebar(!sidebar)}><img src={menu} width={40} height={40} alt='menu' /></div>
                         <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img src={add} width={40} height={40} alt='add' /></div>
@@ -109,7 +113,7 @@ const Navigations = () => {
                             </div>
                         </div>
                     </div>
-                </div>}
+                </div>} */}
             </div>
         </>
     )

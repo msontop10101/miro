@@ -14,14 +14,15 @@ import SuccessModal from "./SuccessModal";
 const CreateAccountSchema = Yup.object().shape({
   username: Yup.string()
     .required('Obbligatorio'),
-  email: Yup.string().email('Invalid email address').required('Obbligatorio'),
+  email: Yup.string().email('indirizzo email non valido').required('Obbligatorio'),
   password: Yup
     .string()
-    .required('Password is required')
-    .min(5, 'Your password is too short.'),
+    .required('Obbligatorio')
+    .min(5, 'La tua password è troppo breve.'),
   confirmpassword: Yup
     .string()
-    .oneOf([Yup.ref('password'), null], 'Passwords must match')
+    .required('Obbligatorio')
+    .oneOf([Yup.ref('password'), null], 'Le password devono essere identiche')
 });
 
 
