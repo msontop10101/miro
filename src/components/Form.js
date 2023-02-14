@@ -13,8 +13,8 @@ import SuccessModal from "./SuccessModal";
 
 const CreateAccountSchema = Yup.object().shape({
   username: Yup.string()
-    .required('Required'),
-  email: Yup.string().email('Invalid email address').required('Required'),
+    .required('Obbligatorio'),
+  email: Yup.string().email('Invalid email address').required('Obbligatorio'),
   password: Yup
     .string()
     .required('Password is required')
@@ -65,7 +65,7 @@ const CreateAccountForm = () => {
               {errors.password && touched.password ? <div className='text-[red]'>{errors.password}</div> : null}
             </div>
             <div class='flex flex-col w-[100%]'>
-              <label class='font-bold mb-1 text-lg text-white' htmlFor="confirmpassword">confrim password*</label>
+              <label class='font-bold mb-1 text-lg text-white' htmlFor="confirmpassword">confema password*</label>
               <Field name="confirmpassword" type="password" placeholder='Inserisci qui il testo'
                 style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px', color:'white' }} />
               {errors.confirmpassword && touched.confirmpassword ? <div className='text-[red]'>{errors.confirmpassword}</div> : null}
@@ -74,7 +74,7 @@ const CreateAccountForm = () => {
 
             <div class='relative w-[60%]'>
               <div class='flex justify-center py-5 '>
-                <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 text-white '>{loading ? <div className='flex justify-center items-center'>
+                <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', border: 'none', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase text-white '>{loading ? <div className='flex justify-center items-center'>
                 <RotatingLines
                   strokeColor="grey"
                   strokeWidth="5"
@@ -106,8 +106,8 @@ export default CreateAccountForm;
 
 
 const LoginSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
-  password: Yup.string().required('Required'),
+  email: Yup.string().email('Invalid email').required('Obbligatorio'),
+  password: Yup.string().required('Obbligatorio'),
 });
 
 
@@ -147,7 +147,7 @@ export const LoginForm = () => {
 
             <div class='relative w-[60%]'>
               <div class='flex justify-center py-5 '>
-                <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 text-white '>{loading ? <div className='flex justify-center items-center'>
+                <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', border:"none" ,padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase border-2 border-gray-300 text-white '>{loading ? <div className='flex justify-center items-center'>
                 <RotatingLines
                   strokeColor="grey"
                   strokeWidth="5"

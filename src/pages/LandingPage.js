@@ -62,7 +62,7 @@ const LandingPage = () => {
                             <div class='relative'>
                                 <div class='flex justify-center py-5 w-[100%]'>
                                     <Link to='/crea-un-account'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '300px' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '94vw' }} class='z-40 font-semibold'>SCOPRI DI PIÙ</button>
                                     </Link>
                                 </div>
                                 {/* <div class='absolute bottom-[-120%] md:hidden'><img src={bgbtn} alt='bgbtn' /></div> */}
@@ -96,11 +96,11 @@ const LandingPage = () => {
                             lunghezza e complessità a tua scelta
                             che sembra scritto da un essere
                             umano</p>
-                        <p class='font-semibold sub-body-font text-lg py-2 mt-3'>provalo per crederci</p>
+                        <p class='font-semibold sub-body-font text-xl py-2 mt-3'>provalo per crederci</p>
                         <div class='relative'>
                             <div class='flex justify-center py-5'>
-                                <Link to='/crea-un-account' class='w-[80%] z-40'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '100%' }} class=' font-semibold'>CREA IL TUO ACCOUNT</button>
+                                <Link to='/crea-un-account' class='w-[100%] z-40'>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '94vw' }} class=' font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
                             <div class='absolute bottom-[-120%] md:bottom-[-350%]'><img src={bgbtn} alt='bgbtn' /></div>
@@ -139,7 +139,29 @@ const LandingPage = () => {
                                         e corretta</p>
                                 </div>
                             </div>
-                            <div class='flex justify-end'>
+                            <div class='flex gap-4 py-6 w-full md:w-[45%] md:hidden '>
+                                <div><img src={design} alt="design" /></div>
+                                <div class='text-white'>
+                                <h1 class='font-semibold sub-body-font text-normal mb-4'>idee</h1>
+                                <p class='small-body-font'>Manchi di creatività? Non ti
+                                            preoccupare, con il tuo nuovo
+                                            assistente fare brainstorming
+                                            non sarà più un problema</p>
+                                </div>
+                            </div>
+                            <div class='flex gap-4 py-6 w-full md:w-[45%] md:hidden'>
+                                <div><img src={laptop} alt="laptop" /></div>
+                                <div class='text-white'>
+                                <h1 class='font-semibold sub-body-font text-lg mb-4'>scrivere</h1>
+                                <p class='small-body-font'>Miro è in grado di scrivere e
+                                        modificare qualsiasi tipo di
+                                        testo: da ricerche ad articoli, a
+                                        contratti e molto altro</p>
+                                </div>
+                            </div>
+
+
+                            <div class='hidden md:flex justify-end'>
                                 <div class='flex gap-4 py-4 w-full md:w-[45%]'>
                                     <div><img src={design} alt="design" /></div>
                                     <div class='text-white'>
@@ -151,7 +173,7 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class='flex gap-4 py-4 w-full md:w-[45]'>
+                            <div class='hidden md:flex gap-4 py-4 w-full md:w-[45]'>
                                 <div><img src={laptop} alt="laptop" /></div>
                                 <div class='text-white'>
                                     <h1 class='font-semibold sub-body-font text-lg mb-4'>scrivere</h1>
@@ -178,8 +200,8 @@ const LandingPage = () => {
                             conoscenza dell'umanità.</p>
                         <div class='relative'>
                             <div class='flex justify-center py-5 z-40 mb-5'>
-                                <Link to='/crea-un-account' class='w-[80%] z-40'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '100%' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
+                                <Link to='/crea-un-account' class='w-[100%] z-40'>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '94vw' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
                             <div class='absolute bottom-[-180%] md:bottom-[-350%] left-[-20%]'><img src={bgbtn} alt='bgbtn' /></div>

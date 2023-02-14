@@ -21,14 +21,15 @@ input::placeholder {
 .header-font {
   font-family: 'League Spartan', sans-serif;
   font-size: 54px;
+  line-height: 3rem;
 }
 .body-font {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'League Spartan', sans-serif;;
   font-size: 20px;
 }
 .sub-body-font {
   font-family: 'League Spartan', sans-serif;
-  font-size: 20px;
+  font-size: 23px;
 }
 .small-body-font {
   font-family: 'Libre Baskerville', serif;
@@ -64,4 +65,7 @@ input::placeholder {
 }
 .message {
   overflow-wrap: anywhere;
+}
+.accedi-height {
+  height: calc(100vh - 86px - 175px);
 }
