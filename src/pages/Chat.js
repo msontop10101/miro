@@ -44,9 +44,6 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
         // const messages = chatLogNew.map((message) => message.message).join('')
         const response = await fetch('https://miro-app.herokuapp.com/api/chat', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
             body: JSON.stringify({
                 message, //: messages
             })
