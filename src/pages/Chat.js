@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { FaPlus } from 'react-icons/fa'
 import { RiDeleteBin6Line } from 'react-icons/ri'
-import { BsMoon } from 'react-icons/bs'
 import { FiExternalLink } from 'react-icons/fi'
 import { ThreeDots } from 'react-loader-spinner'
 import send from '../assets/sendimg.png'
@@ -43,7 +42,7 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
         setChatLog(chatLogNew)
         setLoading(true)
         // const messages = chatLogNew.map((message) => message.message).join('')
-        const response = await fetch('https://student-chat.onrender.com/', {
+        const response = await fetch('https://miro-app.herokuapp.com/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -51,11 +50,11 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
             body: JSON.stringify({
                 message, //: messages
             })
-        });
+        }).catch(error => {setLoading(false); console.log('Error!')});
         const data = await response.json();
-        setChatLog([...chatLogNew, { user: 'gpt', message: `${data.message}` }])
+        setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.message}` }])
         setLoading(false)
-        // console.log(data.message)
+        // console.log(data.data.message)
         }
     }
 
