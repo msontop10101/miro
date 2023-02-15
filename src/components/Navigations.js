@@ -15,7 +15,7 @@ const Navigations = ({ setSidebarState, closeSidebarState }) => {
     setSidebarState(sidebar)
 
     useEffect(() => {
-      console.log(closeSidebarState)
+    //   console.log(closeSidebarState)
       closeSidebarState && setSidebar(false) 
     }, [closeSidebarState])
     
