@@ -44,7 +44,7 @@ const Chat = ({ sidebarState, setCloseSidebarState }) => {
             setChatLog(chatLogNew)
             setLoading(true)
 
-            const response = await fetch('https://c193-102-88-35-65.eu.ngrok.io/api/chat', {
+            const response = await fetch('https://miro-app.herokuapp.com/api/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
