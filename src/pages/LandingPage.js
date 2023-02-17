@@ -100,7 +100,7 @@ const LandingPage = () => {
                         <div class='relative'>
                             <div class='flex justify-center py-5'>
                                 <Link to='/crea-un-account' class='w-[100%] z-40'>
-                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '94vw' }} class=' font-semibold'>CREA IL TUO ACCOUNT</button>
+                                    <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px' }} class='w-[94vw] md:w-[100%] font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
                             <div class='absolute bottom-[-120%] md:bottom-[-350%]'><img src={bgbtn} alt='bgbtn' /></div>
@@ -161,7 +161,7 @@ const LandingPage = () => {
                             </div>
 
 
-                            <div class='hidden md:flex justify-end'>
+                            <div class='hidden md:flex'>
                                 <div class='flex gap-4 py-4 w-full md:w-[45%]'>
                                     <div><img src={design} alt="design" /></div>
                                     <div class='text-white'>
@@ -173,16 +173,20 @@ const LandingPage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div class='hidden md:flex gap-4 py-4 w-full md:w-[45]'>
-                                <div><img src={laptop} alt="laptop" /></div>
-                                <div class='text-white'>
-                                    <h1 class='font-semibold sub-body-font text-lg mb-4'>scrivere</h1>
-                                    <p class='small-body-font'>Miro è in grado di scrivere e
+
+                            <div class='hidden md:flex'>
+                                <div class='flex gap-4 py-4 w-full md:w-[45%]'>
+                                    <div><img src={laptop} alt="laptop" /></div>
+                                    <div class='text-white'>
+                                        <h1 class='font-semibold sub-body-font text-normal mb-4'>scrivere</h1>
+                                        <p class='small-body-font'>Miro è in grado di scrivere e
                                         modificare qualsiasi tipo di
                                         testo: da ricerche ad articoli, a
                                         contratti e molto altro</p>
+                                    </div>
                                 </div>
                             </div>
+                            
 
                             <div>
                                 <p class='font-bold text-lg text-white'>+ tante nuove funzioni in arrivo</p>
@@ -194,8 +198,8 @@ const LandingPage = () => {
 
                 <div class='text-white my-3 px-3 flex justify-center'>
                     <div>
-                        <h1 class='font-bold header-font my-3'>Il futuro è oggi.</h1>
-                        <p class=' body-font my-3'>Crea ora il tuo account e inizia a
+                        <h1 class='font-bold header-font my-3 z-50'>Il futuro è oggi.</h1>
+                        <p class=' body-font my-3 z-50'>Crea ora il tuo account e inizia a
                             sfruttare l'intero universo di
                             conoscenza dell'umanità.</p>
                         <div class='relative'>
@@ -204,7 +208,7 @@ const LandingPage = () => {
                                     <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '94vw' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
-                            <div class='absolute bottom-[-180%] md:bottom-[-350%] left-[-20%]'><img src={bgbtn} alt='bgbtn' /></div>
+                            <div class='absolute block md:hidden bottom-[-180%] md:bottom-[-350%] left-[-20%]'><img src={bgbtn} alt='bgbtn' /></div>
                         </div>
                     </div>
                 </div>
