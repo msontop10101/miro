@@ -14,8 +14,9 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/mirologo.png'
 
 import '../App.css'
+import axios from 'axios'
 
-const Chat = ({sidebarState, setCloseSidebarState}) => {
+const Chat = ({ sidebarState, setCloseSidebarState }) => {
     const navbarHeight = '30px'
     const footerHeight = '2px'
     const bottomRef = useRef(null);
@@ -34,63 +35,99 @@ const Chat = ({sidebarState, setCloseSidebarState}) => {
     const [loading, setLoading] = useState(false)
     async function handleSubmit(e) {
         e.preventDefault();
-        if(input.trim()){
+        if (input.trim()) {
             let chatLogNew = [...chatLog, { user: 'me', message: `${input}` }]
-        const message = input;
+            const message = input;
+            console.log(input)
 
-        setInput("")
-        setChatLog(chatLogNew)
-        setLoading(true)
-        // const messages = chatLogNew.map((message) => message.message).join('')
-        const response = await fetch('https://miro-app.herokuapp.com/api/chat', {
-            method: 'POST',
-            body: JSON.stringify({
-                message, //: messages
-            })
-        }).catch(error => {setLoading(false); console.log('Error!')});
-        const data = await response.json();
-        setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.message}` }])
-        setLoading(false)
-        // console.log(data.data.message)
+            setInput("")
+            setChatLog(chatLogNew)
+            setLoading(true)
+
+            const response = await fetch('https://7ea4-102-88-35-174.eu.ngrok.io/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message, //: messages
+                })
+            }).catch(error => { setLoading(false); console.log('Error!') });
+            const data = await response.json();
+            setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.message}` }])
+            setLoading(false)
+            console.log(data.data.message)
+            // try {
+            //     const res = await axios.post('https://7ea4-102-88-35-174.eu.ngrok.io/api/chat', {
+            //         method: 'POST',
+            //         headers: {
+            //             'Content-Type': 'application/json'
+            //         },
+            //         data: JSON.stringify({
+            //             message
+            //         })
+            //     })
+            //     console.log(res)
+            //     const data = await res.json()
+            //     setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.data.message}` }])
+            // } catch (err) {
+            //     const { response } = err;
+            //     setLoading(false);
+            // }
         }
+
+        // try {
+        //     res = await axios("https://miro-app.herokuapp.com/api/chat", {
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         data: { message }
+        //     })
+        //     console.log(res);
+        //     setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.message}` }])
+        // }
+        // catch (err) {
+        //     const { response } = err;
+        //     setLoading(false);
+        // }
     }
 
     useEffect(() => {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chatLog]);
 
-    
+
 
     return (
         <>
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
             {sidebarState && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
-                    <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
-                        <div class='flex justify-end' onClick={() => setCloseSidebarState(true)}><img src={menu} width={40} height={40} alt='menu' /></div>
-                        <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img onClick={() => {setLoading(false); setChatLog([ ])}} src={add} width={40} height={40} alt='add' /></div>
+                <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
+                    <div class='flex justify-end' onClick={() => setCloseSidebarState(true)}><img src={menu} width={40} height={40} alt='menu' /></div>
+                    <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img onClick={() => { setLoading(false); setChatLog([]) }} src={add} width={40} height={40} alt='add' /></div>
+                    <div>
+                        <p class='text-white font-bold text-lg'>Cronologia chat:</p>
+                    </div>
+                </div>
+                <div class='flex flex-col gap-10 pt-4' style={{ borderTop: '1px solid gray' }}>
+                    <div class='flex justify-between'>
+                        <p class='font-bold text-lg text-white'>Istruzioni</p>
+                        <img src={manual} width={40} height={40} alt='manual' />
+                    </div>
+                    <div class='flex justify-between'>
+                        <Link to='/accedi'>
+                            <div onClick={() => { logout(); setCloseSidebarState(true) }}><img src={logouticon} width={40} height={40} alt='logout' /></div>
+                        </Link>
                         <div>
-                            <p class='text-white font-bold text-lg'>Cronologia chat:</p>
-                        </div>
-                    </div>
-                    <div class='flex flex-col gap-10 pt-4' style={{ borderTop: '1px solid gray' }}>
-                        <div class='flex justify-between'>
-                            <p class='font-bold text-lg text-white'>Istruzioni</p>
-                            <img src={manual} width={40} height={40} alt='manual' />
-                        </div>
-                        <div class='flex justify-between'>
-                            <Link to='/accedi'>
-                            <div onClick={() => {logout(); setCloseSidebarState(true)}}><img src={logouticon} width={40} height={40} alt='logout' /></div>
+                            <Link to='/'>
+                                <div class='bg-black flex items-center'>
+                                    <img src={logo} width={100} height={100} alt='logo' />
+                                </div>
                             </Link>
-                            <div>
-                                <Link to='/'>
-                                    <div class='bg-black flex items-center'>
-                                        <img src={logo} width={100} height={100} alt='logo' />
-                                    </div>
-                                </Link>
-                            </div>
                         </div>
                     </div>
-                </div>}
+                </div>
+            </div>}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
