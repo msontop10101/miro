@@ -3,7 +3,7 @@ import axios from "axios"
 
 
 const instance = axios.create({
-    baseURL: 'https://4169-197-210-78-96.eu.ngrok.io/'
+    baseURL: 'https://82df-102-88-35-65.eu.ngrok.io/'
 });
 
 
