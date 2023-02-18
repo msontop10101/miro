@@ -66,7 +66,7 @@ const CreateAccountForm = () => {
               {errors.password && touched.password ? <div className='text-[red]'>{errors.password}</div> : null}
             </div>
             <div class='flex flex-col w-[100%]'>
-              <label class='font-bold mb-1 text-lg text-white' htmlFor="confirmpassword">confema password*</label>
+              <label class='font-bold mb-1 text-lg text-white' htmlFor="confirmpassword">conferma password*</label>
               <Field name="confirmpassword" type="password" placeholder='Inserisci qui il testo'
                 style={{ height: '50px', border: '2px solid white', borderRadius: '10px', backgroundColor: 'transparent', padding: '0px 15px 0px 15px', color:'white' }} />
               {errors.confirmpassword && touched.confirmpassword ? <div className='text-[red]'>{errors.confirmpassword}</div> : null}

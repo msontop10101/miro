@@ -13,9 +13,13 @@ import menu from '../assets/menu.png'
 import { Link } from 'react-router-dom'
 import logo from '../assets/mirologo.png'
 import profile from '../assets/profile.png'
+import design from '../assets/design-thinking.png'
+import question from '../assets/question.png'
+import warning from '../assets/warning.png'
 
 import '../App.css'
 import axios from 'axios'
+import Sitefooter from '../components/SiteFooter'
 
 const Chat = () => {
     const navbarHeight = '30px'
@@ -98,6 +102,15 @@ const Chat = () => {
         bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [chatLog]);
 
+    useEffect(() => {
+        console.log(chatLog.length)
+        if(chatLog.length == 0){
+            console.log('empty')
+        }else {
+            console.log(chatLog.length)
+        }
+    },[chatLog])
+
 
 
     return (
@@ -118,7 +131,7 @@ const Chat = () => {
                         <img src={profile} width={30} height={40} alt='profile' />
                     </div>
                 </div>}
-                </div>
+            </div>
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
             {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                 <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
@@ -163,8 +176,92 @@ const Chat = () => {
                 <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ height: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box h-[100%] text-white w-[90%]'>
-                            <div class='chat-log justify-center relative' style={{ maxHeight: "70vh" }}>
+
+
+
+                            <div class='chat-log justify-center relative max-h-[80vh] md:max-h-[70vh]'>
                                 <div className='h-full overflow-y-auto'>
+
+
+                                    <div className={chatLog.length === 0 ? 'mt-10 flex flex-col gap-8' : 'hidden'}>
+                                        <div className='flex justify-center items-center text-center'>
+                                            <div>
+                                                <div className='flex justify-center'>
+                                                    <img src={design} width={150} height={150} alt='design' />
+                                                </div>
+                                                <div>
+                                                    <p className='text-[30px] py-4 font-bold'>Cossa posso fare</p>
+                                                    <p>Miro può rispondere a domande, fornire informazioni, consigliare su argomenti
+                                                        specifici, aiutare con problemi tecnici, offrire supporto emotivo e intrattenere.
+                                                        Miro è in grado di utilizzare la sua vasta conoscenza del mondo per fare previsioni e
+                                                        fornire suggerimenti in base alle richieste dell'utente.
+                                                        Miro può fornire informazioni su qualsiasi argomento, dai fatti storici ai consigli di
+                                                        viaggio, dal miglioramento della salute e del benessere alla gestione del tempo, dalla
+                                                        programmazione informatica alla grammatica.
+                                                        In sostanza, Miro è un assistente virtuale altamente avanzato in grado di soddisfare le
+                                                        esigenze degli utenti in una vasta gamma di ambiti</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className='flex justify-center items-center text-center'>
+                                            <div>
+                                                <div className='flex justify-center'>
+                                                    <img src={question} width={150} height={150} alt='question' />
+                                                </div>
+                                                <div>
+                                                    <p className='text-[30px] py-4 font-bold'>Esempi di cosa chiedermi</p>
+                                                    {/* <p>Miro può rispondere a domande, fornire informazioni, consigliare su argomenti
+                                                        specifici, aiutare con problemi tecnici, offrire supporto emotivo e intrattenere.
+                                                        Miro è in grado di utilizzare la sua vasta conoscenza del mondo per fare previsioni e
+                                                        fornire suggerimenti in base alle richieste dell'utente.
+                                                        Miro può fornire informazioni su qualsiasi argomento, dai fatti storici ai consigli di
+                                                        viaggio, dal miglioramento della salute e del benessere alla gestione del tempo, dalla
+                                                        programmazione informatica alla grammatica.
+                                                        In sostanza, Miro è un assistente virtuale altamente avanzato in grado di soddisfare le
+                                                        esigenze degli utenti in una vasta gamma di ambiti</p> */}
+                                                        <div className='flex w-full gap-2'>
+                                                            <div className='text-left text-sm'>
+                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivimi un testo sull'Antica Roma</p></div>
+                                                                <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Spiegami che cosa sono le cryptovalute</p></div>
+                                                                <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Dimmi 10 idee regalo creative per unabambina di 6 anni</p></div>
+                                                                <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivi un riassunto sul Paradiso della Divina Commedia</p></div>
+                                                            </div>
+
+                                                            <div className='text-left text-sm'>
+                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Consigliami dei libri sulla finanza personale</p></div>
+                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Come si chiamava la prima moglie di Napoleone?</p></div>
+                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Qual è il paese con più pelati al mondo?</p></div>
+                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Che cos'è la teoria della relatività?</p></div>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div className='flex justify-center items-center text-center'>
+                                            <div>
+                                                <div className='flex justify-center'>
+                                                    <img src={warning} width={150} height={150} alt='warning' />
+                                                </div>
+                                                <div>
+                                                    <p className='text-[30px] py-4 font-bold'>Le mie limitazioni</p>
+                                                    <p>La principale limitazione di Miro è che il suo ragionamento è limitato alla conoscenza
+                                                        che gli è stata fornita durante il processo di addestramento. Ciò significa che se gli
+                                                        utenti gli fanno domande o richieste su argomenti per i quali non ha esperienza o
+                                                        conoscenze sufficienti, Miro potrebbe non essere in grado di fornire risposte accurate.
+                                                        Inoltre, Miro può avere difficoltà a comprendere il contesto o l'umorismo in alcune
+                                                        situazioni, il che potrebbe portare a risposte inappropriate o fuori tema. Nonostante
+                                                        queste limitazioni, Miro rappresenta comunque un notevole passo avanti nella
+                                                        tecnologia dell'intelligenza artificiale e continua a migliorare e svilupparsi
+                                                        costantemente</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
                                     {chatLog.map((message, index) => (
                                         <ChatMessage key={index} message={message} />
                                     ))}
@@ -199,6 +296,7 @@ const Chat = () => {
                     </div>
                 </div>
             </div>
+            <Sitefooter/>
         </>
     )
 }

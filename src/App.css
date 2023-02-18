@@ -69,3 +69,6 @@ input::placeholder {
 .accedi-height {
   height: calc(100vh - 86px - 175px);
 }
+.list-container {
+  list-style: circle;
+}

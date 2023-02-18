@@ -9,7 +9,7 @@ const Footerlinks = () => {
             <Link to ='/'><li>crea un account</li></Link>
             <Link to ='/'><li>accedi</li></Link>
             <Link to ='/'><li>istruzioni</li></Link>
-            <Link to ='/'><li>privacy policy</li></Link>
+            <Link to ='/privacy-policy'><li>privacy policy</li></Link>
         </ul>
     </>
   )

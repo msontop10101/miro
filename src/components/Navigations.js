@@ -10,10 +10,10 @@ import { useAuthContext } from '../context/auth/auth';
 
 
 const Navigations = () => {
-    const {isAuth, logout} = useAuthContext()
+    const { isAuth, logout } = useAuthContext()
     const [open, setOpen] = useState(false)
-    
-    
+
+
     return (
         <>
             <div class='relative z-50'>
@@ -36,9 +36,9 @@ const Navigations = () => {
                             <li>{isAuth ? 'vai alla chat' : 'accedi'}</li>
                         </Link>
                         <Link to='/accedi' class={isAuth ? 'flex items-center gap-2' : 'hidden'} onClick={() => logout()}>
-                                    <img src={logouticon} width={40} height={40} alt='profile' />
-                                    <li>disconnessione</li>
-                                </Link>
+                            <img src={logouticon} width={40} height={40} alt='profile' />
+                            <li>disconnessione</li>
+                        </Link>
                     </ul>
                 </nav>
 
