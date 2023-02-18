@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/mirologo.png'
 import './Navigations.css'
 import profile from '../assets/profile.png'
+import logouticon from '../assets/logouticon.png'
 import chat from '../assets/chat.png'
 import menu from '../assets/menu.png'
 import { useAuthContext } from '../context/auth/auth';
 
 
 const Navigations = () => {
-    const {isAuth} = useAuthContext()
+    const {isAuth, logout} = useAuthContext()
     const [open, setOpen] = useState(false)
     
     
@@ -26,14 +27,18 @@ const Navigations = () => {
                         </Link>
                     </div>
                     <ul class='navigations flex gap-8'>
-                        <Link to='/crea-un-account' class='flex items-center gap-2'>
+                        <Link to='/crea-un-account' class={isAuth ? 'hidden' : 'flex items-center gap-2'}>
                             <img src={profile} width={40} height={40} alt='profile' />
                             <li>crea un account</li>
                         </Link>
                         <Link to='/accedi' class='flex items-center'>
                             <img src={chat} width={40} height={40} alt='chat' />
-                            <li>{isAuth ? 'chiacchierata' : 'accedi'}</li>
+                            <li>{isAuth ? 'vai alla chat' : 'accedi'}</li>
                         </Link>
+                        <Link to='/accedi' class={isAuth ? 'flex items-center gap-2' : 'hidden'} onClick={() => logout()}>
+                                    <img src={logouticon} width={40} height={40} alt='profile' />
+                                    <li>disconnessione</li>
+                                </Link>
                     </ul>
                 </nav>
 
@@ -51,13 +56,17 @@ const Navigations = () => {
                         </div>
                         <div class='flex justify-center z-50'>
                             {open && <ul class='navigations flex gap-8 py-2'>
-                                <Link to='/crea-un-account' class='flex items-center gap-2' onClick={() => setOpen(false)}>
+                                <Link to='/crea-un-account' class={isAuth ? 'hidden' : 'flex items-center gap-2'} onClick={() => setOpen(false)}>
                                     <img src={profile} width={40} height={40} alt='profile' />
                                     <li>crea un account</li>
                                 </Link>
                                 <Link to='/accedi' class='flex items-center' onClick={() => setOpen(false)}>
                                     <img src={chat} width={40} height={40} alt='chat' />
-                                    <li>{isAuth ? 'chiacchierata' : 'accedi'}</li>
+                                    <li>{isAuth ? 'vai alla chat' : 'accedi'}</li>
+                                </Link>
+                                <Link to='/accedi' class={isAuth ? 'flex items-center gap-2' : 'hidden'} onClick={() => logout()}>
+                                    <img src={logouticon} width={40} height={40} alt='profile' />
+                                    <li>disconnessione</li>
                                 </Link>
                             </ul>}
                         </div>
