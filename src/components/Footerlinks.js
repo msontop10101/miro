@@ -12,7 +12,6 @@ const Footerlinks = () => {
           <ul class='footerlinks text-white px-3 '>
             <Link to='/crea-un-account'><li>crea un account</li></Link>
             <Link to='/accedi'><li>accedi</li></Link>
-            <Link to='/'><li>istruzioni</li></Link>
             <Link to='/privacy-policy'><li>privacy policy</li></Link>
           </ul>
         </div>
