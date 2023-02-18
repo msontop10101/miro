@@ -1,5 +1,5 @@
 import React from 'react'
-import CreateAccountForm, { AccountSettingsForm } from '../components/Form'
+import { AccountSettingsForm } from '../components/Form'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
 import '../App.css'
@@ -16,14 +16,14 @@ const AccountSettings = () => {
         <AccountSettingsForm/>
         
         </div>
-        {/* <div>
+        <div>
         <div class='absolute top-5 md:hidden top-[-20%] left-[-30%]'>
           <img src={two} alt='two'/>
         </div>
         <div class='absolute bottom-0 md:hidden top-30 right-[-45%]'>
           <img src={three} alt='three'/>
         </div>
-        </div> */}
+        </div>
       </div>
       <Sitefooter/>
     </>
