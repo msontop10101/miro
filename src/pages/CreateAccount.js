@@ -3,10 +3,13 @@ import CreateAccountForm from '../components/Form'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
 import '../App.css'
+import Navigations from '../components/Navigations'
+import Sitefooter from '../components/SiteFooter'
 
 const CreateAccount = () => {
   return (
     <>
+    <Navigations/>
       <div class='w-full overflow-x-hidden bg-black px-3 h-[100vh] flex'>
         <div class='flex z-40 justify-center flex-col w-full relative items-center'>
         <h1 class='text-white text-4xl header-font font-bold mb-2 leading-[4rem] z-30'>CREA IL TUO ACCOUNT</h1>
@@ -22,6 +25,7 @@ const CreateAccount = () => {
         </div>
         </div> */}
       </div>
+      <Sitefooter/>
     </>
   )
 }

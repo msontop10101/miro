@@ -6,11 +6,14 @@ import '../App.css'
 import one from '../assets/1.png'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
+import Navigations from '../components/Navigations';
+import Sitefooter from '../components/SiteFooter';
 
 const Accedi = () => {
   const { error } = useAuthContext()
   return (
     <>
+    <Navigations/>
     {error && <p className='bg-[#ec6363] z-30 text-white p-2 text-center'>email e password non valide</p>}
       <div class='bg-black relative overflow-hidden z-30'>
         
@@ -29,6 +32,7 @@ const Accedi = () => {
           <img class='absolute block md:hidden bottom-[-10%] right-[-10%]' src={three} alt="bg" />
         </div>
       </div>
+      <Sitefooter/>
     </>
   )
 }

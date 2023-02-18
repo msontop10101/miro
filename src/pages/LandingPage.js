@@ -12,11 +12,14 @@ import two from '../assets/2.png'
 import three from '../assets/3.png'
 import { Link } from 'react-router-dom'
 import Footerlinks from '../components/Footerlinks'
+import Sitefooter from '../components/SiteFooter'
+import Navigations from '../components/Navigations'
 
 const LandingPage = () => {
     return (
         // #
         <>
+            <Navigations/>
             <div class='bg-[#1c2022] pb-5 overflow-hidden'>
                 <div class='px-5 flex items-center justify-center text-white relative overflow-hidden md:overflow-visible'>
                     <div>
@@ -217,6 +220,7 @@ const LandingPage = () => {
                     <Footerlinks />
                 </div>
             </div>
+            <Sitefooter/>
         </>
     )
 }

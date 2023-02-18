@@ -21,14 +21,12 @@ function App() {
   
   return (
     <>
-      <Navigations setSidebarState={setSidebarState} closeSidebarState={closeSidebarState}/>
       <Routes>
         <Route path='/' element={<LandingPage />}></Route>
         <Route path='/crea-un-account' element={<CreateAccount />}>crea un account</Route>
         <Route path='/accedi' element={<Accedi />}>Accedi</Route>
-        <Route path='/chat' element={<Chat sidebarState={sidebarState} setCloseSidebarState={setCloseSidebarState}/>}></Route>
+        <Route path='/chat' element={<Chat/>}></Route>
       </Routes>
-      <Sitefooter/>
     </>
   );
 }

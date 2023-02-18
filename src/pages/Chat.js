@@ -12,16 +12,18 @@ import manual from '../assets/manual.png'
 import menu from '../assets/menu.png'
 import { Link } from 'react-router-dom'
 import logo from '../assets/mirologo.png'
+import profile from '../assets/profile.png'
 
 import '../App.css'
 import axios from 'axios'
 
-const Chat = ({ sidebarState, setCloseSidebarState }) => {
+const Chat = () => {
     const navbarHeight = '30px'
     const footerHeight = '2px'
     const bottomRef = useRef(null);
     const [input, setInput] = useState('')
     const { isAuth, logout } = useAuthContext()
+    const [sidebar, setSidebar] = useState(false)
     const [chatLog, setChatLog] = useState([
         // {
         //     user: 'me',
@@ -100,10 +102,27 @@ const Chat = ({ sidebarState, setCloseSidebarState }) => {
 
     return (
         <>
+            <div className='relative'>
+                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
+                    <div class='flex justify-between items-center pr-3'>
+                        <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
+                    </div>
+                    <div>
+                        <Link to='/'>
+                            <div class=' flex items-center'>
+                                <img src={logo} width={100} height={100} alt='logo' />
+                            </div>
+                        </Link>
+                    </div>
+                    <div>
+                        <img src={profile} width={30} height={40} alt='profile' />
+                    </div>
+                </div>}
+                </div>
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
-            {sidebarState && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
+            {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                 <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
-                    <div class='flex justify-end' onClick={() => setCloseSidebarState(true)}><img src={menu} width={40} height={40} alt='menu' /></div>
+                    <div class='flex justify-end' onClick={() => setSidebar(false)}><img src={menu} width={40} height={40} alt='menu' /></div>
                     <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img onClick={() => { setLoading(false); setChatLog([]) }} src={add} width={40} height={40} alt='add' /></div>
                     <div>
                         <p class='text-white font-bold text-lg'>Cronologia chat:</p>
@@ -116,7 +135,7 @@ const Chat = ({ sidebarState, setCloseSidebarState }) => {
                     </div>
                     <div class='flex justify-between'>
                         <Link to='/accedi'>
-                            <div onClick={() => { logout(); setCloseSidebarState(true) }}><img src={logouticon} width={40} height={40} alt='logout' /></div>
+                            <div onClick={() => { logout(); setSidebar(false) }}><img src={logouticon} width={40} height={40} alt='logout' /></div>
                         </Link>
                         <div>
                             <Link to='/'>

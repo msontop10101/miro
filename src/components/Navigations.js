@@ -8,16 +8,9 @@ import menu from '../assets/menu.png'
 import { useAuthContext } from '../context/auth/auth';
 
 
-const Navigations = ({ setSidebarState, closeSidebarState }) => {
+const Navigations = () => {
     const {isAuth} = useAuthContext()
     const [open, setOpen] = useState(false)
-    const [sidebar, setSidebar] = useState(false)
-    setSidebarState(sidebar)
-
-    useEffect(() => {
-    //   console.log(closeSidebarState)
-      closeSidebarState && setSidebar(false) 
-    }, [closeSidebarState])
     
     
     return (
@@ -39,12 +32,13 @@ const Navigations = ({ setSidebarState, closeSidebarState }) => {
                         </Link>
                         <Link to='/accedi' class='flex items-center'>
                             <img src={chat} width={40} height={40} alt='chat' />
-                            <li>accedi</li>
+                            <li>{isAuth ? 'chiacchierata' : 'accedi'}</li>
                         </Link>
                     </ul>
                 </nav>
 
-                <div class={isAuth ? 'hidden' : 'block relative pb-20 bg-[#1c2022]'}>
+                {/* <div class={isAuth ? 'hidden' : 'block relative pb-20 bg-[#1c2022]'}> */}
+                <div class='relative pb-20 bg-[#1c2022]'>
                     <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022]/30 backdrop-blur-md fixed top-0 right-0 left-0'>
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
@@ -63,14 +57,14 @@ const Navigations = ({ setSidebarState, closeSidebarState }) => {
                                 </Link>
                                 <Link to='/accedi' class='flex items-center' onClick={() => setOpen(false)}>
                                     <img src={chat} width={40} height={40} alt='chat' />
-                                    <li>accedi</li>
+                                    <li>{isAuth ? 'chiacchierata' : 'accedi'}</li>
                                 </Link>
                             </ul>}
                         </div>
                     </nav>
                 </div>
 
-                <div className='relative'>
+                {/* <div className='relative'>
                 {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
                     <div class='flex justify-between items-center pr-3'>
                         <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
@@ -86,7 +80,7 @@ const Navigations = ({ setSidebarState, closeSidebarState }) => {
                         <img src={profile} width={30} height={40} alt='profile' />
                     </div>
                 </div>}
-                </div>
+                </div> */}
                 {/* {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                     <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
                         <div class='flex justify-end' onClick={() => setSidebar(!sidebar)}><img src={menu} width={40} height={40} alt='menu' /></div>
