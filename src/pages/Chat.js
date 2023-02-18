@@ -21,7 +21,7 @@ import '../App.css'
 import axios from 'axios'
 import Sitefooter from '../components/SiteFooter'
 
-const Chat = () => {
+const Chat = ({ currentPath }) => {
     const navbarHeight = '30px'
     const footerHeight = '2px'
     const bottomRef = useRef(null);
@@ -296,7 +296,7 @@ const Chat = () => {
                     </div>
                 </div>
             </div>
-            <Sitefooter/>
+            <Sitefooter currentPath={currentPath}/>
         </>
     )
 }

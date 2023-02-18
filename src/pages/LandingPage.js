@@ -11,7 +11,6 @@ import one from '../assets/1.png'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
 import { Link } from 'react-router-dom'
-import Footerlinks from '../components/Footerlinks'
 import Sitefooter from '../components/SiteFooter'
 import Navigations from '../components/Navigations'
 
@@ -20,7 +19,7 @@ const LandingPage = () => {
         // #
         <>
             <Navigations/>
-            <div class='bg-[#1c2022] pb-5 overflow-hidden'>
+            <div class='bg-[#1c2022] pb-5 overflow-hidden relative'>
                 <div class='px-5 flex items-center justify-center text-white relative overflow-hidden md:overflow-visible'>
                     <div>
                         <img class='absolute block md:hidden top-[-20%] left-[-30%]' src={one} alt="bg" />
@@ -199,9 +198,9 @@ const LandingPage = () => {
                     </div>
                 </div>
 
-                <div class='text-white my-3 px-3 flex justify-center'>
+                <div class='text-white my-3 px-3 flex justify-center z-30'>
                     <div>
-                        <h1 class='font-bold header-font my-3 z-50'>Il futuro è oggi.</h1>
+                        <h1 class='font-bold header-font my-3'>Il futuro è oggi.</h1>
                         <p class=' body-font my-3 z-50'>Crea ora il tuo account e inizia a
                             sfruttare l'intero universo di
                             conoscenza dell'umanità.</p>
@@ -211,13 +210,9 @@ const LandingPage = () => {
                                     <button style={{ backgroundColor: 'black', borderRadius: '10px', padding: '20px', width: '94vw' }} class='z-40 font-semibold'>CREA IL TUO ACCOUNT</button>
                                 </Link>
                             </div>
-                            <div class='absolute block md:hidden bottom-[-180%] md:bottom-[-350%] left-[-20%]'><img src={bgbtn} alt='bgbtn' /></div>
+                            <div class='absolute block md:hidden bottom-[-180%] z-10 md:bottom-[-350%] left-[-20%]'><img src={bgbtn} alt='bgbtn' /></div>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <Footerlinks />
                 </div>
             </div>
             <Sitefooter/>

@@ -22,9 +22,9 @@ const Accedi = () => {
             <h1 class='font-bold text-4xl text-white py-4 text-center'>Accedi</h1>
             <LoginForm />
           </div>
-          <div class='mb-4'>
+          {/* <div class='mb-4'>
             <Footerlinks />
-          </div>
+          </div> */}
         </div>
         <div className='z-10 md:hidden'>
           <img class='absolute block md:hidden top-[-20%] left-[-30%]' src={one} alt="bg" />
