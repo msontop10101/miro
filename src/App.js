@@ -29,7 +29,7 @@ function App() {
         <Route path='/accedi' element={<Accedi />}>Accedi</Route>
         <Route path='/chat' element={<Chat currentPath={currentPath}/>}></Route>
         <Route path='/privacy-policy' element={<PrivacyPolicy/>}></Route>
-        <Route path='/account-settings' element={<AccountSettings/>}></Route>
+        <Route path='/account-settings' element={<AccountSettings />}></Route>
       </Routes>
     </>
   );

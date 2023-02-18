@@ -201,7 +201,7 @@ export const AccountSettingsForm = () => {
           email: '',
           password: '',
         }}
-        validationSchema={CreateAccountSchema}
+        validationSchema={AccountSettingsSchema}
         onSubmit={values => {
           // signup(values);
           // console.log(values)

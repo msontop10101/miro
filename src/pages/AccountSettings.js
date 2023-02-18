@@ -10,7 +10,7 @@ const AccountSettings = () => {
   return (
     <>
     <Navigations/>
-      <div class='w-full overflow-x-hidden bg-black px-3 flex' style={{height: 'calc(100vh - 200px)'}}>
+      <div class='w-full overflow-x-hidden bg-black px-3 flex' style={{height: 'calc(100vh - 68px)'}}>
         <div class='flex z-40 justify-center flex-col w-full relative items-center'>
         <h1 class='text-white text-4xl header-font font-bold mb-2 leading-[4rem] z-30'>Impostazioni account</h1>
         <AccountSettingsForm/>
