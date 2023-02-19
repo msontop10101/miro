@@ -17,7 +17,7 @@ const Accedi = () => {
     {error && <p className='bg-[#ec6363] z-30 text-white p-2 text-center'>email e password non valide</p>}
       <div class='bg-black relative overflow-hidden z-30'>
         
-        <div class='bg-black flex flex-col justify-center'>
+        <div class='bg-[#1c2022] flex flex-col justify-center'>
           <div class='flex flex-col justify-center pt-[50px] w-full items-center accedi-height'>
             <h1 class='font-bold text-4xl text-white py-4 text-center'>Accedi</h1>
             <LoginForm />
@@ -26,11 +26,11 @@ const Accedi = () => {
             <Footerlinks />
           </div> */}
         </div>
-        <div className='z-10 md:hidden'>
+        {/* <div className='z-10 md:hidden'>
           <img class='absolute block md:hidden top-[-20%] left-[-30%]' src={one} alt="bg" />
           <img class='absolute top-[-35%] right-[-30%]' src={two} alt="bg" />
           <img class='absolute block md:hidden bottom-[-10%] right-[-10%]' src={three} alt="bg" />
-        </div>
+        </div> */}
       </div>
       <Sitefooter/>
     </>

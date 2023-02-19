@@ -8,8 +8,8 @@ const Footerlinks = () => {
   const { isAuth } = useAuthContext()
   return (
     <>
-      <div className='overflow-hidden relative z-10' style={{border:'1px solid black'}}>
-      <div className='absolute z-10 bottom-[-20] left-30'><img src={one} alt='bg' /></div>
+      <div className='overflow-hidden relative z-10' style={{border:'1px solid #1c2022'}}>
+      {/* <div className='absolute z-10 bottom-[-20] left-30'><img src={one} alt='bg' /></div> */}
         <div className='relative z-20'>
           <ul class='footerlinks text-white px-3 '>
             <Link to='/crea-un-account'><li>crea un account</li></Link>

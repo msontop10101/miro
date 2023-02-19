@@ -87,11 +87,11 @@ const CreateAccountForm = () => {
               </div>: <p>ISCRIVITI</p>}</button>
 
               </div>
-              <div>
+              {/* <div>
                 <div class='absolute md:hidden bottom-[-90%]'><img src={bgbtn} alt='bgbtn' /></div>
                 <div class='absolute md:hidden bottom-[-170%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
                 <div class='absolute md:hidden bottom-[-160%] right-[-50%]'><img src={bgbtn} alt='bgbtn' /></div>
-              </div>
+              </div> */}
               </div>
           </Form>
         )}
@@ -160,11 +160,11 @@ export const LoginForm = () => {
               </div>: <p>Accedi</p>}</button>
 
               </div>
-              <div>
+              {/* <div>
                 <div class='absolute md:hidden bottom-[-90%]'><img src={bgbtn} alt='bgbtn' /></div>
                 <div class='absolute md:hidden bottom-[-170%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
                 <div class='absolute md:hidden bottom-[-160%] right-[-50%]'><img src={bgbtn} alt='bgbtn' /></div>
-              </div>
+              </div> */}
               </div>
           </Form>
         )}
@@ -244,11 +244,11 @@ export const AccountSettingsForm = () => {
               </div>: <p>SALVA</p>}</button>
 
               </div>
-              <div>
+              {/* <div>
                 <div class='absolute md:hidden bottom-[-90%]'><img src={bgbtn} alt='bgbtn' /></div>
                 <div class='absolute md:hidden bottom-[-170%] left-[-60%]'><img src={bgbtn} alt='bgbtn' /></div>
                 <div class='absolute md:hidden bottom-[-160%] right-[-50%]'><img src={bgbtn} alt='bgbtn' /></div>
-              </div>
+              </div> */}
               </div>
           </Form>
         )}
