@@ -141,9 +141,9 @@ const Chat = ({ currentPath }) => {
                     </div>
                 </div>
                 <div class='flex flex-col gap-10 pt-4' style={{ borderTop: '1px solid gray' }}>
-                    <div class='flex justify-between'>
-                        <p class='font-bold text-lg text-white'>Istruzioni</p>
-                        <img src={manual} width={40} height={40} alt='manual' />
+                    <div class='flex justify-between items-center'>
+                    <Link to='/account-settings' className='text-white font-bold '>impostazioni account</Link>
+                        <img src={profile} width={30} height={30} alt='profile' />
                     </div>
                     <div class='flex justify-between'>
                         <Link to='/accedi'>
