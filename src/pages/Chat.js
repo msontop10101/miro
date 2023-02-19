@@ -114,7 +114,7 @@ const Chat = ({ currentPath }) => {
 
 
     return (
-        <div className='h-[100vh] bg-[red] overflow-y-hidden'>
+        <div className='h-[100vh] overflow-y-hidden'>
             {/* <div className='relative'>
                 {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-4 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
                     
