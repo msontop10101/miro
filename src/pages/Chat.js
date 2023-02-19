@@ -172,7 +172,7 @@ const Chat = ({ currentPath }) => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ height: `calc(100vh - ${navbarHeight} - ${footerHeight})` }}>
+                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex flex-col justify-between py-4' style={{ height: '100vh' }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box h-[100%] text-white w-[90%]'>
 
