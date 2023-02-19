@@ -104,7 +104,7 @@ const Chat = ({ currentPath }) => {
 
     useEffect(() => {
         console.log(chatLog.length)
-        if(chatLog.length == 0){
+        if(chatLog.length === 0){
             console.log('empty')
         }else {
             console.log(chatLog.length)
@@ -142,7 +142,7 @@ const Chat = ({ currentPath }) => {
                 </div>
                 <div class='flex flex-col gap-10 pt-4' style={{ borderTop: '1px solid gray' }}>
                     <div class='flex justify-between items-center'>
-                    <Link to='/account-settings' className='text-white font-bold '>impostazioni account</Link>
+                    <Link to={isAuth ? '/account-settings' : '/accedi'} className='text-white font-bold '>impostazioni account</Link>
                         <img src={profile} width={30} height={30} alt='profile' />
                     </div>
                     <div class='flex justify-between'>

@@ -2,8 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 import one from '../assets/1.png'
+import { useAuthContext } from '../context/auth/auth'
 
 const Footerlinks = () => {
+  const { isAuth } = useAuthContext()
   return (
     <>
       <div className='overflow-hidden relative z-10' style={{border:'1px solid black'}}>
@@ -12,7 +14,7 @@ const Footerlinks = () => {
           <ul class='footerlinks text-white px-3 '>
             <Link to='/crea-un-account'><li>crea un account</li></Link>
             <Link to='/accedi'><li>accedi</li></Link>
-            <Link to='/account-settings'><li>impostazioni account</li></Link>
+            <Link to={isAuth ? '/account-settings' : '/accedi'}><li>impostazioni account</li></Link>
             <Link to='/privacy-policy'><li>privacy policy</li></Link>
           </ul>
         </div>
