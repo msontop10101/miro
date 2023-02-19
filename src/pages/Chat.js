@@ -116,10 +116,8 @@ const Chat = ({ currentPath }) => {
     return (
         <>
             <div className='relative'>
-                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-8 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
-                    <div class='flex justify-between items-center pr-3'>
-                        <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
-                    </div>
+                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-4 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
+                    
                     <div>
                         <Link to='/'>
                             <div class=' flex items-center'>
@@ -127,15 +125,16 @@ const Chat = ({ currentPath }) => {
                             </div>
                         </Link>
                     </div>
-                    <div>
-                        <img src={profile} width={30} height={40} alt='profile' />
+                    <div class='flex justify-between items-center pr-3'>
+                        <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
                     </div>
                 </div>}
             </div>
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
-            {sidebar && <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
+            {sidebar && <div className='flex justify-end'>
+                <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                 <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
-                    <div class='flex justify-end' onClick={() => setSidebar(false)}><img src={menu} width={40} height={40} alt='menu' /></div>
+                    <div class='flex justify-start' onClick={() => setSidebar(false)}><img src={menu} width={40} height={40} alt='menu' /></div>
                     <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img onClick={() => { setLoading(false); setChatLog([]) }} src={add} width={40} height={40} alt='add' /></div>
                     <div>
                         <p class='text-white font-bold text-lg'>Cronologia chat:</p>
@@ -159,7 +158,7 @@ const Chat = ({ currentPath }) => {
                         </div>
                     </div>
                 </div>
-            </div>}
+            </div></div>}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
@@ -183,7 +182,7 @@ const Chat = ({ currentPath }) => {
                                 <div className='h-full overflow-y-auto'>
 
 
-                                    <div className={chatLog.length === 0 ? 'mt-10 flex flex-col gap-8' : 'hidden'}>
+                                    <div className={chatLog.length === 0 ? 'mt-20 flex flex-col gap-8' : 'hidden'}>
                                         <div className='flex justify-center items-center text-center'>
                                             <div>
                                                 <div className='flex justify-center'>
