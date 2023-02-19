@@ -66,7 +66,7 @@ const Navigations = () => {
                                 </Link>
                                 <Link to='/accedi' class={isAuth ? 'flex items-center gap-2' : 'hidden'} onClick={() => logout()}>
                                     <img src={logouticon} width={40} height={40} alt='profile' />
-                                    <li>disconnessione</li>
+                                    <li>logout</li>
                                 </Link>
                             </ul>}
                         </div>

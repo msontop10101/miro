@@ -27,7 +27,7 @@ const Chat = ({ currentPath }) => {
     const bottomRef = useRef(null);
     const [input, setInput] = useState('')
     const { isAuth, logout } = useAuthContext()
-    const [sidebar, setSidebar] = useState(false)
+    const [open, setOpen] = useState(false)
     const [chatLog, setChatLog] = useState([
         // {
         //     user: 'me',
@@ -115,7 +115,7 @@ const Chat = ({ currentPath }) => {
 
     return (
         <>
-            <div className='relative'>
+            {/* <div className='relative'>
                 {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-4 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
                     
                     <div>
@@ -129,9 +129,34 @@ const Chat = ({ currentPath }) => {
                         <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
                     </div>
                 </div>}
-            </div>
+            </div> */}
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
-            {sidebar && <div className='flex justify-end'>
+            <div class='relative pb-20 bg-[#1c2022]'>
+                    <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
+                        <div class='flex justify-between items-center pr-3'>
+                            <Link to='/'>
+                                <div class=' flex items-center'>
+                                    <img src={logo} width={100} height={100} alt='logo' />
+                                    {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
+                                </div>
+                            </Link>
+                            <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu' /></div>
+                        </div>
+                        <div class='flex justify-center z-50'>
+                            {open && <ul class='navigations flex gap-8 py-2 bg-[#1c2022]'>
+                                <Link to='/account-settings' class='flex items-center gap-2' onClick={() => setOpen(false)}>
+                                    <img src={profile} width={40} height={40} alt='profile' />
+                                    <li>impostazioni account</li>
+                                </Link>
+                                <Link to='/accedi' class='flex items-center gap-1' onClick={() => {setOpen(false); logout()}}>
+                                    <img src={logouticon} width={40} height={40} alt='chat' />
+                                    <li>logout</li>
+                                </Link>
+                            </ul>}
+                        </div>
+                    </nav>
+                </div>
+            {/* {sidebar && <div className='flex justify-end'>
                 <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
                 <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
                     <div class='flex justify-start' onClick={() => setSidebar(false)}><img src={menu} width={40} height={40} alt='menu' /></div>
@@ -158,7 +183,7 @@ const Chat = ({ currentPath }) => {
                         </div>
                     </div>
                 </div>
-            </div></div>}
+            </div></div>} */}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
