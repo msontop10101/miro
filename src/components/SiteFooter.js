@@ -5,7 +5,7 @@ import Footerlinks from './Footerlinks';
 const Sitefooter = ({currentPath}) => {
   return (
     <>
-        <div class='text-center font-bold text-lg bg-[#1c2022] text-white'>
+        <div class='text- overflow-hidden font-bold text-lg bg-[#1c2022] text-white'>
             <div className={currentPath === '/chat' ? 'hidden' : 'text-start'}>
             <Footerlinks/>
             </div>
