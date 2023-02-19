@@ -235,15 +235,6 @@ const Chat = ({ currentPath }) => {
                                                 </div>
                                                 <div>
                                                     <p className='text-[30px] py-4 font-bold'>Esempi di cosa chiedermi</p>
-                                                    {/* <p>Miro può rispondere a domande, fornire informazioni, consigliare su argomenti
-                                                        specifici, aiutare con problemi tecnici, offrire supporto emotivo e intrattenere.
-                                                        Miro è in grado di utilizzare la sua vasta conoscenza del mondo per fare previsioni e
-                                                        fornire suggerimenti in base alle richieste dell'utente.
-                                                        Miro può fornire informazioni su qualsiasi argomento, dai fatti storici ai consigli di
-                                                        viaggio, dal miglioramento della salute e del benessere alla gestione del tempo, dalla
-                                                        programmazione informatica alla grammatica.
-                                                        In sostanza, Miro è un assistente virtuale altamente avanzato in grado di soddisfare le
-                                                        esigenze degli utenti in una vasta gamma di ambiti</p> */}
                                                         <div className='flex w-full gap-2'>
                                                             <div className='text-left text-sm'>
                                                                 <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivimi un testo sull'Antica Roma</p></div>
