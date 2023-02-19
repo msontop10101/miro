@@ -207,7 +207,7 @@ const Chat = ({ currentPath }) => {
                                 <div className='h-full overflow-y-auto'>
 
 
-                                    <div className={chatLog.length === 0 ? 'mt-[20%] flex flex-col gap-8' : 'hidden'}>
+                                    <div className={chatLog.length === 0 ? 'mt-[87px] flex flex-col gap-8' : 'hidden'}>
                                         <div className='flex justify-center items-center text-center'>
                                             <div>
                                                 <div className='flex justify-center'>
