@@ -13,6 +13,7 @@ import three from '../assets/3.png'
 import { Link } from 'react-router-dom'
 import Sitefooter from '../components/SiteFooter'
 import Navigations from '../components/Navigations'
+import Homefooter from '../components/Homefooter'
 
 const LandingPage = () => {
     return (
@@ -215,7 +216,8 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
-            <Sitefooter/>
+            {/* <Sitefooter/> */}
+            <Homefooter/>
         </>
     )
 }
