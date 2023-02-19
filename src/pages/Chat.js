@@ -131,7 +131,7 @@ const Chat = ({ currentPath }) => {
                 </div>}
             </div> */}
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
-            <div class='relative pb-20 bg-[#1c2022]'>
+            <div class='relative pb-20 bg-[#1c2022] overflow-y-hidden'>
                     <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
