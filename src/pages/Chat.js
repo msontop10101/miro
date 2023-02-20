@@ -214,7 +214,7 @@ const Chat = ({ currentPath }) => {
                                                     <img src={design} width={150} height={150} alt='design' />
                                                 </div>
                                                 <div>
-                                                    <p className='text-[30px] py-4 font-bold'>Cossa posso fare</p>
+                                                    <p className='text-[30px] py-4 font-bold'>Cosa posso fare</p>
                                                     <p>Miro può rispondere a domande, fornire informazioni, consigliare su argomenti
                                                         specifici, aiutare con problemi tecnici, offrire supporto emotivo e intrattenere.
                                                         Miro è in grado di utilizzare la sua vasta conoscenza del mondo per fare previsioni e

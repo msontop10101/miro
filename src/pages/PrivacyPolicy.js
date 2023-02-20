@@ -30,9 +30,9 @@ const PrivacyPolicy = () => {
               Miro si riserva il diritto di modificare la presente privacy policy in qualsiasi momento. Tutte le modifiche saranno comunicate agli utenti tramite e-mail o attraverso il nostro servizio.
               <br />
               Contatti
-              Per qualsiasi domanda o commento riguardo alla nostra privacy policy o alle informazioni personali degli utenti, si prega di contattare il nostro servizio clienti tramite e-mail all'indirizzo [inserire qui l'indirizzo e-mail del servizio clienti].
+              Per qualsiasi domanda o commento riguardo alla nostra privacy policy o alle informazioni personali degli utenti, si prega di contattare il nostro servizio clienti tramite e-mail all'indirizzo <a href='mailto:assistenza@miroapp.it'>assistenza@miroapp.it</a>.
               <br />
-              Ultimo aggiornamento: [inserire la data dell'ultimo aggiornamento della privacy policy].</p>
+              Ultimo aggiornamento: Monday, 20/02/2023.</p>
           </div>
         </div>
       </div>
