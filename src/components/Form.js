@@ -219,13 +219,13 @@ export const AccountSettingsForm = () => {
             .then(response => {
               setLoading(false)
               setSuccess(true)
-              console.log('User details updated successfully', response.data.data);
+              console.log('User details updated successfully', response);
               console.log('Updated!');
               logout()
               // Optionally show a success message to the user
             })
             .catch(error => {
-              console.log('Error: ', error)
+              console.log('Error: ', error.message)
               setLoading(false)
             })
             .finally(() => {
