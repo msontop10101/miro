@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     setCurrentPath(location.pathname)
   },[location]) 
-  console.log(currentPath)
+  // console.log(currentPath)
 
   return (
     <>

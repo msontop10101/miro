@@ -8,6 +8,7 @@ export const AuthContext = React.createContext({
   access: localStorage.getItem("access"),
   // refresh: localStorage.getItem('refresh'),
   user: localStorage.getItem("user"),
+  userId: localStorage.getItem('userId'),
   error: "",
   success: false,
   loading: false,
@@ -34,6 +35,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("access", res.data.data.token);
         // localStorage.setItem('refresh', res.data.refresh)
         localStorage.setItem("user", res.data.data.email);
+        localStorage.setItem('userId', res.data.data._id)
         setIsloading(false);
       })
       .catch((err) => {
@@ -45,6 +47,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.removeItem("access");
         // localStorage.removeItem('refresh', null)
         localStorage.removeItem("user");
+        localStorage.removeItem('userId')
       });
   };
   const logout = () => {
@@ -54,6 +57,7 @@ export const AuthProvider = ({ children }) => {
     setError("");
     setisAuth(false);
     localStorage.removeItem("user");
+    localStorage.removeItem('userId')
   };
   return (
     <AuthContext.Provider
@@ -64,9 +68,11 @@ export const AuthProvider = ({ children }) => {
         user: localStorage.getItem("user"),
         error,
         success,
+        setsucess,
         loading,
         login: Login,
         logout,
+        userId: localStorage.getItem('userId')
       }}
     >
       {children}
