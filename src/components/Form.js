@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuthContext } from '../context/auth/auth';
+// import { user } from '../context/auth/auth'
 import { useSignupContext } from '../context/auth/signup';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
@@ -29,9 +30,9 @@ const CreateAccountSchema = Yup.object().shape({
 
 const CreateAccountForm = () => {
   const { signup, success, loading } = useSignupContext()
-  
-  
-  
+
+
+
 
   return (
     <div className='w-full'>
@@ -99,7 +100,7 @@ const CreateAccountForm = () => {
           </Form>
         )}
       </Formik>
-      {success && <SuccessModal/>}
+      {success && <SuccessModal />}
     </div>
   )
 }
@@ -193,6 +194,8 @@ export const AccountSettingsForm = () => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   console.log(userId)
+  // console.log(useAuthContext)
+  // console.log(user)
 
   useEffect(() => {
     // console.log(success)
@@ -200,7 +203,7 @@ export const AccountSettingsForm = () => {
       setSuccess(false)
     }, 5000);
     console.log(success)
-  },[success])
+  }, [success])
 
   return (
     <div className='w-full'>
@@ -215,7 +218,7 @@ export const AccountSettingsForm = () => {
           // signup(values);
           // console.log(values)
           setLoading(true)
-          axios.put(`https://miro-app.heroku.com/api/auth/${userId}`, values)
+          axios.put(`https://e7cb-197-210-28-111.eu.ngrok.io/api/auth/${userId}`, values)
             .then(response => {
               setLoading(false)
               setSuccess(true)
@@ -260,15 +263,15 @@ export const AccountSettingsForm = () => {
             <div class='relative w-[60%]'>
               <div class='flex justify-center py-5 '>
                 <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', border: 'none', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase text-white '>{loading ? <div className='flex justify-center items-center'>
-                <RotatingLines
-                  strokeColor="grey"
-                  strokeWidth="5"
-                  animationDuration="0.75"
-                  width="20"
-                  visible={true}
-                />
-                <p className='text-[gray]'>updating...</p>
-              </div>: <p>SALVA</p>}</button>
+                  <RotatingLines
+                    strokeColor="grey"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    width="20"
+                    visible={true}
+                  />
+                  <p className='text-[gray]'>updating...</p>
+                </div> : <p>SALVA</p>}</button>
                 {/* <button type="submit" style={{ backgroundColor: 'black', borderRadius: '10px', border: 'none', padding: '10px', width: '100%' }} class='z-40 font-semibold uppercase text-white' >SALVA</button> */}
 
               </div>
@@ -281,7 +284,7 @@ export const AccountSettingsForm = () => {
           </Form>
         )}
       </Formik>
-      {success && <UpdateSuccessModal/>}
+      {success && <UpdateSuccessModal />}
     </div>
   )
 }
