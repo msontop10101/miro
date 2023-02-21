@@ -218,7 +218,8 @@ export const AccountSettingsForm = () => {
           // signup(values);
           // console.log(values)
           setLoading(true)
-          axios.put(`https://e7cb-197-210-28-111.eu.ngrok.io/api/auth/${userId}`, values)
+          const url = `https://miro-app.herokuapp.com/api/auth/${userId}`
+          axios.put(url, values)
             .then(response => {
               setLoading(false)
               setSuccess(true)
