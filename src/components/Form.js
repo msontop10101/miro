@@ -193,7 +193,7 @@ export const AccountSettingsForm = () => {
   const { userId, logout } = useAuthContext()
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
-  console.log(userId)
+  // console.log(userId)
   // console.log(useAuthContext)
   // console.log(user)
 
