@@ -27,7 +27,7 @@ const Homefooter = ({ currentPath }) => {
         <div className='relative opacity-25 z-20 w-full h-[40px] bg-[blue]'>B</div> */}
                     </div>
                 </div>
-                <p className='text-center' style={{ borderTop: "1px solid white" }}>Miro App It &copy; 2023</p>
+                <p className='text-center' style={{ borderTop: "1px solid white" }}>Gral v. 0.8 &copy; 2023</p>
             </div>
         </>
     )

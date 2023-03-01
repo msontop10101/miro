@@ -11,7 +11,7 @@ import logouticon from '../assets/logouticon.png'
 import manual from '../assets/manual.png'
 import menu from '../assets/menu.png'
 import { Link } from 'react-router-dom'
-import logo from '../assets/mirologo.png'
+import logo from '../assets/Gral.png'
 import profile from '../assets/profile.png'
 import design from '../assets/design-thinking.png'
 import question from '../assets/question.png'
@@ -215,14 +215,14 @@ const Chat = ({ currentPath }) => {
                                                 </div>
                                                 <div>
                                                     <p className='text-[30px] py-4 font-bold'>Cosa posso fare</p>
-                                                    <p>Miro può rispondere a domande, fornire informazioni, consigliare su argomenti
+                                                    <p>Gral può rispondere a domande, fornire informazioni, consigliare su argomenti
                                                         specifici, aiutare con problemi tecnici, offrire supporto emotivo e intrattenere.
-                                                        Miro è in grado di utilizzare la sua vasta conoscenza del mondo per fare previsioni e
+                                                        Gral è in grado di utilizzare la sua vasta conoscenza del mondo per fare previsioni e
                                                         fornire suggerimenti in base alle richieste dell'utente.
-                                                        Miro può fornire informazioni su qualsiasi argomento, dai fatti storici ai consigli di
+                                                        Gral può fornire informazioni su qualsiasi argomento, dai fatti storici ai consigli di
                                                         viaggio, dal miglioramento della salute e del benessere alla gestione del tempo, dalla
                                                         programmazione informatica alla grammatica.
-                                                        In sostanza, Miro è un assistente virtuale altamente avanzato in grado di soddisfare le
+                                                        In sostanza, Gral è un assistente virtuale altamente avanzato in grado di soddisfare le
                                                         esigenze degli utenti in una vasta gamma di ambiti</p>
                                                 </div>
                                             </div>
@@ -261,13 +261,13 @@ const Chat = ({ currentPath }) => {
                                                 </div>
                                                 <div>
                                                     <p className='text-[30px] py-4 font-bold'>Le mie limitazioni</p>
-                                                    <p>La principale limitazione di Miro è che il suo ragionamento è limitato alla conoscenza
+                                                    <p>La principale limitazione di Gral è che il suo ragionamento è limitato alla conoscenza
                                                         che gli è stata fornita durante il processo di addestramento. Ciò significa che se gli
                                                         utenti gli fanno domande o richieste su argomenti per i quali non ha esperienza o
-                                                        conoscenze sufficienti, Miro potrebbe non essere in grado di fornire risposte accurate.
-                                                        Inoltre, Miro può avere difficoltà a comprendere il contesto o l'umorismo in alcune
+                                                        conoscenze sufficienti, Gral potrebbe non essere in grado di fornire risposte accurate.
+                                                        Inoltre, Gral può avere difficoltà a comprendere il contesto o l'umorismo in alcune
                                                         situazioni, il che potrebbe portare a risposte inappropriate o fuori tema. Nonostante
-                                                        queste limitazioni, Miro rappresenta comunque un notevole passo avanti nella
+                                                        queste limitazioni, Gral rappresenta comunque un notevole passo avanti nella
                                                         tecnologia dell'intelligenza artificiale e continua a migliorare e svilupparsi
                                                         costantemente</p>
                                                 </div>

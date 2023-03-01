@@ -37,7 +37,7 @@ const LandingPage = () => {
                                 un click.
                             </h1>
                             <p class=' text-lg body-font my-4'>
-                                Miro è un'intelligenza artificiale
+                                Gral è un'intelligenza artificiale
                                 in grado di rispondere a qualsiasi
                                 tua domanda con testi semplici o
                                 complessi in pochi secondi.
@@ -90,7 +90,7 @@ const LandingPage = () => {
                 <div class='text-white px-3 relative block md:flex justify-center'>
                     <div class='w-full md:w-[50%]'>
                         <h1 class='text-4xl header-font font-bold mb-5 md:mb-0'>Come funziona</h1>
-                        <p class='body-font'>Miro è semplicissimo da usare:
+                        <p class='body-font'>Gral è semplicissimo da usare:
                             ti basterà creare un account e avrai
                             subito accesso al tuo assistente
                             personale gratuitamente.
@@ -137,7 +137,7 @@ const LandingPage = () => {
                                 <div class='text-white'>
                                     <h1 class='font-semibold sub-body-font text-lg mb-4'>domande</h1>
                                     <p class='small-body-font'>Puoi fare qualsiasi domanda e
-                                        Miro sarà sempre in grado di
+                                        Gral sarà sempre in grado di
                                         fornirti una risposta dettagliata
                                         e corretta</p>
                                 </div>
@@ -156,7 +156,7 @@ const LandingPage = () => {
                                 <div><img src={laptop} alt="laptop" /></div>
                                 <div class='text-white'>
                                 <h1 class='font-semibold sub-body-font text-lg mb-4'>scrivere</h1>
-                                <p class='small-body-font'>Miro è in grado di scrivere e
+                                <p class='small-body-font'>Gral è in grado di scrivere e
                                         modificare qualsiasi tipo di
                                         testo: da ricerche ad articoli, a
                                         contratti e molto altro</p>
@@ -182,7 +182,7 @@ const LandingPage = () => {
                                     <div><img src={laptop} alt="laptop" /></div>
                                     <div class='text-white'>
                                         <h1 class='font-semibold sub-body-font text-normal mb-4'>scrivere</h1>
-                                        <p class='small-body-font'>Miro è in grado di scrivere e
+                                        <p class='small-body-font'>Gral è in grado di scrivere e
                                         modificare qualsiasi tipo di
                                         testo: da ricerche ad articoli, a
                                         contratti e molto altro</p>

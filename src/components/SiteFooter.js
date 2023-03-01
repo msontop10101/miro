@@ -9,7 +9,7 @@ const Sitefooter = ({currentPath}) => {
             <div className={currentPath === '/chat' ? 'hidden' : 'text-start'}>
             <Footerlinks currentPath={currentPath}/>
             </div>
-            <p className='text-center' style={{borderTop: "1px solid white"}}>Miro App It &copy; 2023</p>
+            <p className='text-center' style={{borderTop: "1px solid white"}}>Gral v. 0.8 &copy; 2023</p>
         </div>
     </>
   )
