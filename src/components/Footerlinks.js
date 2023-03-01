@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
-import one from '../assets/1.png'
 import { useAuthContext } from '../context/auth/auth'
 
 const Footerlinks = ({currentPath}) => {

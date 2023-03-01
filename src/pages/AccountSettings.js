@@ -1,7 +1,5 @@
 import React from 'react'
 import { AccountSettingsForm } from '../components/Form'
-import two from '../assets/2.png'
-import three from '../assets/3.png'
 import '../App.css'
 import Navigations from '../components/Navigations'
 import Sitefooter from '../components/SiteFooter'

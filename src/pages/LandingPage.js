@@ -11,7 +11,6 @@ import one from '../assets/1.png'
 import two from '../assets/2.png'
 import three from '../assets/3.png'
 import { Link } from 'react-router-dom'
-import Sitefooter from '../components/SiteFooter'
 import Navigations from '../components/Navigations'
 import Homefooter from '../components/Homefooter'
 

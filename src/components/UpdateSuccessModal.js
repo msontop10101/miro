@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import verify from '../assets/verify.png'
 
 const UpdateSuccessModal = () => {
@@ -9,8 +8,6 @@ const UpdateSuccessModal = () => {
                 <div class="bg-white px-4 py-4 rounded-3xl text-center">
                     <div className='flex justify-center py-4'><img src={verify} width={90} height={90} alt='succcess'/></div>
                     <h1 class="text-xl mb-4 font-bold text-black capitalize">Account aggiornato con successo!</h1>
-                    {/* <h1 class="text-sm mb-4 text-black">Congratulazioni! Sarai uno dei primi a usare l’app made in Italy più innovativa di sempre!</h1> */}
-                    {/* <Link to='/accedi'><button class="bg-black uppercase px-7 py-2 ml-2 rounded-full w-[50%] text-md text-white font-semibold">Accedi</button></Link> */}
                 </div>
             </div>
         </>

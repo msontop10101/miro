@@ -6,9 +6,7 @@ import { ThreeDots } from 'react-loader-spinner'
 import send from '../assets/sendimg.png'
 import { useAuthContext } from '../context/auth/auth'
 import { Navigate } from 'react-router-dom'
-import add from '../assets/add.png'
 import logouticon from '../assets/logouticon.png'
-import manual from '../assets/manual.png'
 import menu from '../assets/menu.png'
 import { Link } from 'react-router-dom'
 import logo from '../assets/Gral.png'
@@ -18,12 +16,9 @@ import question from '../assets/question.png'
 import warning from '../assets/warning.png'
 
 import '../App.css'
-import axios from 'axios'
 import Sitefooter from '../components/SiteFooter'
 
 const Chat = ({ currentPath }) => {
-    const navbarHeight = '30px'
-    const footerHeight = '2px'
     const bottomRef = useRef(null);
     const [input, setInput] = useState('')
     const { isAuth, logout } = useAuthContext()
@@ -197,7 +192,7 @@ const Chat = ({ currentPath }) => {
                         </ul>
                     </div>
                 </div>
-                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex overflow-hidden flex-col justify-between py-4' style={{ height: 'calc(100vh - 83px - 26px)' }}>
+                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex overflow-hidden flex-col justify-between py-4' style={{ height: 'calc(100vh - 83px)' }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box text-white w-[90%]'>
 

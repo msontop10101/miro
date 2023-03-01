@@ -1,5 +1,4 @@
 import React from 'react'
-import Footerlinks from './Footerlinks';
 import { Link } from 'react-router-dom'
 import '../App.css'
 import one from '../assets/1.png'
@@ -23,8 +22,6 @@ const Homefooter = ({ currentPath }) => {
                             </ul>
                         </div>
 
-                        {/* <div className='absolute bottom-0 z-10 w-[70px] h-[70px] bg-[red]'>a</div>
-        <div className='relative opacity-25 z-20 w-full h-[40px] bg-[blue]'>B</div> */}
                     </div>
                 </div>
                 <p className='text-center' style={{ borderTop: "1px solid white" }}>Gral v. 0.8 &copy; 2023</p>
