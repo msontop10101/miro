@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/mirologo.png'
+import logo from '../assets/Gral.png'
 import './Navigations.css'
 import profile from '../assets/profile.png'
 import logouticon from '../assets/logouticon.png'
@@ -21,7 +21,7 @@ const Navigations = () => {
                     <div>
                         <Link to='/'>
                             <div class='flex items-center'>
-                                <img src={logo} width={100} height={100} alt='logo' />
+                                <img src={logo} width={150} height={150} alt='logo' />
                                 {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
                             </div>
                         </Link>
@@ -48,7 +48,7 @@ const Navigations = () => {
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
                                 <div class=' flex items-center'>
-                                    <img src={logo} width={100} height={100} alt='logo' />
+                                    <img src={logo} width={150} height={150} alt='logo' />
                                     {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
                                 </div>
                             </Link>
