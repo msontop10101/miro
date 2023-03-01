@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import phone from '../assets/4.png'
+import phone from '../assets/screenshot.png'
 import openai from '../assets/8.png'
 import google from '../assets/9.png'
 import question from '../assets/question.png'
