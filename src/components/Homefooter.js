@@ -9,7 +9,7 @@ const Homefooter = ({ currentPath }) => {
     const { isAuth } = useAuthContext()
     return (
         <>
-            <div class='text- overflow-hidden font-bold text-lg bg-[#1c2022] text-white'>
+            <div class='text- overflow-hidden text-lg bg-[#1c2022] text-white'>
                 <div className={currentPath === '/chat' ? 'hidden' : 'text-start'}>
                     <div className='overflow-hidden relative z-10' style={{ border: '1px solid #1c2022' }}>
                         <div className='absolute z-10 bottom-[-20] left-30'><img src={one} alt='bg' /></div>
