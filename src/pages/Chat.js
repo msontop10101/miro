@@ -110,28 +110,14 @@ const Chat = ({ currentPath }) => {
 
     return (
         <div className='h-[100vh] overflow-y-hidden'>
-            {/* <div className='relative'>
-                {isAuth && <div class='z-50 flex justify-between items-center md:hidden px-4 py-4 bg-[#1c2022] backdrop-blur-md fixed top-0 right-0 left-0'>
-                    
-                    <div>
-                        <Link to='/'>
-                            <div class=' flex items-center'>
-                                <img src={logo} width={100} height={100} alt='logo' />
-                            </div>
-                        </Link>
-                    </div>
-                    <div class='flex justify-between items-center pr-3'>
-                        <div onClick={() => setSidebar(!sidebar)}><img src={menu} width={30} height={30} alt='menu' /></div>
-                    </div>
-                </div>}
-            </div> */}
+            
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
             <div class='relative pb-20 bg-[#1c2022] overflow-y-hidden'>
                     <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
                         <div class='flex justify-between items-center pr-3'>
                             <Link to='/'>
                                 <div class=' flex items-center'>
-                                    <img src={logo} width={100} height={100} alt='logo' />
+                                    <img src={logo} width={150} height={150} alt='logo' />
                                     {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
                                 </div>
                             </Link>
@@ -151,34 +137,6 @@ const Chat = ({ currentPath }) => {
                         </div>
                     </nav>
                 </div>
-            {/* {sidebar && <div className='flex justify-end'>
-                <div class='bg-[black] w-[70%] h-[100vh] z-50 absolute top-0 p-6 flex flex-col gap-6 justify-between'>
-                <div class='flex flex-col gap-6 pb-4' style={{ borderBottom: '1px solid gray' }}>
-                    <div class='flex justify-start' onClick={() => setSidebar(false)}><img src={menu} width={40} height={40} alt='menu' /></div>
-                    <div class='text-white font-bold text-lg flex items-center justify-between'><p>Nuova chat</p><img onClick={() => { setLoading(false); setChatLog([]) }} src={add} width={40} height={40} alt='add' /></div>
-                    <div>
-                        <p class='text-white font-bold text-lg'>Cronologia chat:</p>
-                    </div>
-                </div>
-                <div class='flex flex-col gap-10 pt-4' style={{ borderTop: '1px solid gray' }}>
-                    <div class='flex justify-between items-center'>
-                    <Link to={isAuth ? '/account-settings' : '/accedi'} className='text-white font-bold '>impostazioni account</Link>
-                        <img src={profile} width={30} height={30} alt='profile' />
-                    </div>
-                    <div class='flex justify-between'>
-                        <Link to='/accedi'>
-                            <div onClick={() => { logout(); setSidebar(false) }}><img src={logouticon} width={40} height={40} alt='logout' /></div>
-                        </Link>
-                        <div>
-                            <Link to='/'>
-                                <div class='bg-black flex items-center'>
-                                    <img src={logo} width={100} height={100} alt='logo' />
-                                </div>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div></div>} */}
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>

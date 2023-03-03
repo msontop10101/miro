@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/Gral.png'
-import './Navigations.css'
+import './Navigations.css' 
 import profile from '../assets/profile.png'
 import logouticon from '../assets/logouticon.png'
 import chat from '../assets/chat.png'
