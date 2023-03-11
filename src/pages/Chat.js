@@ -57,7 +57,7 @@ const Chat = ({ currentPath }) => {
             const data = await response.json();
             setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.content}` }])
             setLoading(false)
-            console.log(data)
+            // console.log(data)
             // try {
             //     const res = await axios.post('https://7ea4-102-88-35-174.eu.ngrok.io/api/chat', {
             //         method: 'POST',
