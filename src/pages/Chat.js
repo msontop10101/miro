@@ -55,9 +55,9 @@ const Chat = ({ currentPath }) => {
                 })
             }).catch(error => { setLoading(false); console.log('Error!') });
             const data = await response.json();
-            setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.message}` }])
+            setChatLog([...chatLogNew, { user: 'gpt', message: `${data.data.content}` }])
             setLoading(false)
-            console.log(data.data.message)
+            console.log(data)
             // try {
             //     const res = await axios.post('https://7ea4-102-88-35-174.eu.ngrok.io/api/chat', {
             //         method: 'POST',
@@ -99,44 +99,44 @@ const Chat = ({ currentPath }) => {
 
     useEffect(() => {
         console.log(chatLog.length)
-        if(chatLog.length === 0){
+        if (chatLog.length === 0) {
             console.log('empty')
-        }else {
+        } else {
             console.log(chatLog.length)
         }
-    },[chatLog])
+    }, [chatLog])
 
 
 
     return (
         <div className='h-[100vh] overflow-y-hidden'>
-            
+
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
             <div class='relative pb-20 bg-[#1c2022] overflow-y-hidden'>
-                    <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
-                        <div class='flex justify-between items-center pr-3'>
-                            <Link to='/'>
-                                <div class=' flex items-center'>
-                                    <img src={logo} width={150} height={150} alt='logo' />
-                                    {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
-                                </div>
+                <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
+                    <div class='flex justify-between items-center pr-3'>
+                        <Link to='/'>
+                            <div class=' flex items-center'>
+                                <img src={logo} width={150} height={150} alt='logo' />
+                                {/* <p class='text-xl ml-1 font-bold text-white'>miro</p> */}
+                            </div>
+                        </Link>
+                        <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu' /></div>
+                    </div>
+                    <div class='flex justify-center z-50'>
+                        {open && <ul class='navigations flex gap-8 py-2 bg-[#1c2022]'>
+                            <Link to='/account-settings' class='flex items-center gap-2' onClick={() => setOpen(false)}>
+                                <img src={profile} width={40} height={40} alt='profile' />
+                                <li>impostazioni account</li>
                             </Link>
-                            <div onClick={() => setOpen(!open)}><img src={menu} width={40} height={40} alt='menu' /></div>
-                        </div>
-                        <div class='flex justify-center z-50'>
-                            {open && <ul class='navigations flex gap-8 py-2 bg-[#1c2022]'>
-                                <Link to='/account-settings' class='flex items-center gap-2' onClick={() => setOpen(false)}>
-                                    <img src={profile} width={40} height={40} alt='profile' />
-                                    <li>impostazioni account</li>
-                                </Link>
-                                <Link to='/accedi' class='flex items-center gap-1' onClick={() => {setOpen(false); logout()}}>
-                                    <img src={logouticon} width={40} height={40} alt='chat' />
-                                    <li>logout</li>
-                                </Link>
-                            </ul>}
-                        </div>
-                    </nav>
-                </div>
+                            <Link to='/accedi' class='flex items-center gap-1' onClick={() => { setOpen(false); logout() }}>
+                                <img src={logouticon} width={40} height={40} alt='chat' />
+                                <li>logout</li>
+                            </Link>
+                        </ul>}
+                    </div>
+                </nav>
+            </div>
             <div class='flex'>
                 <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
@@ -188,21 +188,21 @@ const Chat = ({ currentPath }) => {
                                                 </div>
                                                 <div>
                                                     <p className='text-[30px] py-4 font-bold'>Esempi di cosa chiedermi</p>
-                                                        <div className='flex w-full gap-2'>
-                                                            <div className='text-left text-sm'>
-                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivimi un testo sull'Antica Roma</p></div>
-                                                                <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Spiegami che cosa sono le cryptovalute</p></div>
-                                                                <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Dimmi 10 idee regalo creative per unabambina di 6 anni</p></div>
-                                                                <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivi un riassunto sul Paradiso della Divina Commedia</p></div>
-                                                            </div>
-
-                                                            <div className='text-left text-sm'>
-                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Consigliami dei libri sulla finanza personale</p></div>
-                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Come si chiamava la prima moglie di Napoleone?</p></div>
-                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Qual è il paese con più pelati al mondo?</p></div>
-                                                                <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Che cos'è la teoria della relatività?</p></div>
-                                                            </div>
+                                                    <div className='flex w-full gap-2'>
+                                                        <div className='text-left text-sm'>
+                                                            <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivimi un testo sull'Antica Roma</p></div>
+                                                            <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Spiegami che cosa sono le cryptovalute</p></div>
+                                                            <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Dimmi 10 idee regalo creative per unabambina di 6 anni</p></div>
+                                                            <div className='flex  gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Scrivi un riassunto sul Paradiso della Divina Commedia</p></div>
                                                         </div>
+
+                                                        <div className='text-left text-sm'>
+                                                            <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Consigliami dei libri sulla finanza personale</p></div>
+                                                            <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Come si chiamava la prima moglie di Napoleone?</p></div>
+                                                            <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Qual è il paese con più pelati al mondo?</p></div>
+                                                            <div className='flex gap-2'><div className='bg-white h-2 w-2 flex items-start mt-[5px] rounded-full'></div><p>Che cos'è la teoria della relatività?</p></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
@@ -264,7 +264,7 @@ const Chat = ({ currentPath }) => {
                     </div>
                 </div>
             </div>
-            <Sitefooter currentPath={currentPath}/>
+            <Sitefooter currentPath={currentPath} />
         </div>
     )
 }
