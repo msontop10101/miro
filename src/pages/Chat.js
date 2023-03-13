@@ -1,7 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { FaPlus } from 'react-icons/fa'
-import { RiDeleteBin6Line } from 'react-icons/ri'
-import { FiExternalLink } from 'react-icons/fi'
 import { ThreeDots } from 'react-loader-spinner'
 import send from '../assets/sendimg.png'
 import { useAuthContext } from '../context/auth/auth'
@@ -113,7 +110,7 @@ const Chat = ({ currentPath }) => {
 
             {!isAuth ? <Navigate to={'/accedi'} /> : null}
             <div class='relative pb-20 bg-[#1c2022] overflow-y-hidden'>
-                <nav class='z-50 block md:hidden px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
+                <nav class='z-50 block px-3 py-4 bg-[#1c2022] fixed top-0 right-0 left-0'>
                     <div class='flex justify-between items-center pr-3'>
                         <Link to='/'>
                             <div class=' flex items-center'>
@@ -138,19 +135,18 @@ const Chat = ({ currentPath }) => {
                 </nav>
             </div>
             <div class='flex'>
-                <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
+                {/* <div class='w-[20%] hidden md:flex bg-[#B1A1ED] flex-col justify-between'>
                     <div class='p-2'>
                         <div class='p-3 border-2 rounded-md border-[#919191] flex items-center gap-5 cursor-pointer'><FaPlus onClick={() => setChatLog([])} /><p>New chat</p></div>
                     </div>
                     <div class='px-2 py-6' style={{ borderTop: '2px solid #919191' }}>
                         <ul class='flex flex-col gap-2 chat'>
                             <li class='flex items-center gap-2'><RiDeleteBin6Line size='1.5em' onClick={() => setChatLog([])} /><p>Clear conversation</p></li>
-                            {/* <li class='flex items-center gap-2'><BsMoon size='1.5em' /><p>Dark Mode</p></li> */}
                             <li class='flex items-center gap-2'><FiExternalLink size='1.5em' /><p>FAQ</p></li>
                         </ul>
                     </div>
-                </div>
-                <div class='w-full z-30 md:w-[80%] bg-[#1c2022] relative flex overflow-hidden flex-col justify-between py-4' style={{ height: 'calc(100vh - 83px)' }}>
+                </div> */}
+                <div class='w-full z-30 bg-[#1c2022] relative flex overflow-hidden flex-col justify-between py-4' style={{ height: 'calc(100vh - 83px)' }}>
                     <div className='flex flex-col gap-5 items-center absolute bottom-10 w-full'>
                         <div class='chat-box text-white w-[90%]'>
 
@@ -160,7 +156,7 @@ const Chat = ({ currentPath }) => {
                                 <div className='h-full overflow-y-auto'>
 
 
-                                    <div className={chatLog.length === 0 ? 'mt-[25%] flex flex-col gap-8' : 'hidden'}>
+                                    <div className={chatLog.length === 0 ? 'mt-[25%] md:mt-[2%] flex flex-col gap-8' : 'hidden'}>
                                         <div className='flex justify-center items-center text-center'>
                                             <div>
                                                 <div className='flex justify-center'>
